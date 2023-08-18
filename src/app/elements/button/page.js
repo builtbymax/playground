@@ -6,8 +6,8 @@ export default function Button() {
   return (
     <main>
       <Navigation />
-      <Section>
-        <Headline headline="Button" tag="h1" />
+      <Section spacingBottom={false}>
+        <Headline headline="Buttons" tag="h1" />
       </Section>
     </main>
   )

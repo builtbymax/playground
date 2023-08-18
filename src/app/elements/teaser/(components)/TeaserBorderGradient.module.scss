@@ -9,6 +9,8 @@ $teaser__background-color: #F7F4F8;
 $border-color-0: rgba(var(--project__color-2__rgb), .8);
 $border-color-1: rgba(var(--project__color-2__rgb), .5);
 
+$teaser-element__headline__font: 'Playfair Display', serif;
+
 .teaser-element {
   --teaser__icon__color: #{$text__color-0};
   width: 100%;
@@ -28,15 +30,12 @@ $border-color-1: rgba(var(--project__color-2__rgb), .5);
     }
   }
   h3 {
-    font-size: 28px;
-    line-height: 36px;
     margin-bottom: 22px;
     color: $text__color-0;
+    font-family: $teaser-element__headline__font;
   }
   p {
     width: 85%;
-    font-size: 16px;
-    line-height: 28px;
     font-weight: 400;
     color: $text__color-0;
   }

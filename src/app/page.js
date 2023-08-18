@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main>
       <Navigation />
-      <Section>
+      <Section spacingBottom={false}>
         <Headline headline={content.page.title} tag={content.page.tag} inlineComponent={false} />
       </Section>
       <Section>

@@ -11,7 +11,7 @@
 // $headline__default__additional__class-name: 'heading-style'; 
 // $headline__default__font-weight: $font-weight__regular;
 // $headline__default__font-family: $font-family__variant-1;
-// $headline__default__color: $font-color__base;
+$headline__default__color: darken(project(2), 8%);
 
 // H1
 //  ---------------------------------------------
