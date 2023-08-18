@@ -1,0 +1,9 @@
+//
+//  Override core elements
+//  ---------------------------------------------
+
+//  Headline Element
+//  ---------------------------------------------
+@if map-get($elements, 'headline-element') == true {
+  @include headline-element();
+}

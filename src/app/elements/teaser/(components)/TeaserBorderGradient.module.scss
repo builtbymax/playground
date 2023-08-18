@@ -1,0 +1,70 @@
+//
+//  TeaserBorderGradient.module.scss
+//  ------------------------------------------------------
+
+$border-radius: 8px;
+$text__color-0: var(--project__color-2);
+$teaser__background-color: #F7F4F8;
+
+$border-color-0: rgba(var(--project__color-2__rgb), .8);
+$border-color-1: rgba(var(--project__color-2__rgb), .5);
+
+.teaser-element {
+  --teaser__icon__color: #{$text__color-0};
+  width: 100%;
+  flex: 1;
+  padding: 35px 30px;
+  position: relative;
+  border-radius: $border-radius;
+  background-color: $teaser__background-color;
+  transition: background 0.45s;
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 30px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 22px;
+    color: $text__color-0;
+  }
+  p {
+    width: 85%;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $text__color-0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+    border-radius: $border-radius;
+    inset: -1px;
+    position: absolute;
+    z-index: -2;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    user-select: none;
+    pointer-events: none;
+
+    transition: background 0.2s;
+    will-change: background;
+    contain: size;
+    background: radial-gradient(
+      300px circle at var(--x__mouse__coordinate) var(--y__mouse__coordinate),
+      $border-color-1 0,
+      $border-color-0 50%,
+      transparent 100%
+    );
+  }
+}
