@@ -5,6 +5,7 @@ import Headline from "@/components/headline-container/HeadlineContainer";
 import TeaserBorderGradient from "./(components)/TeaserBorderGradient";
 import TeaserImageHover from "./(components)/TeaserImageHover";
 import TeaserCollectionWrapper from "./(components)/TeaserCollectionWrapper";
+import TeaserSpaceAnimation from "./(components)/TeaserSpaceAnimation";
 
 export default function Teaser() {
   const pageContent = {
@@ -34,6 +35,12 @@ export default function Teaser() {
         <Headline headline="Collection Teaser Elements" tag="h2" />
         <Element>
           <TeaserCollectionWrapper />
+        </Element>
+      </Section>
+      <Section>
+        <Headline headline="Space like animation teaser" tag="h2" />
+        <Element>
+          <TeaserSpaceAnimation />
         </Element>
       </Section>
     </main>

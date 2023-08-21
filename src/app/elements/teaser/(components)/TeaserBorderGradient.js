@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import styles from './TeaserBorderGradient.module.scss';
 
-export default function Teaser({ slug }) {
+export default function Teaser() {
 
   useEffect(() => {
     const getMousePosition = () => {

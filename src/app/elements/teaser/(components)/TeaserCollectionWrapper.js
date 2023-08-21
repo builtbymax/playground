@@ -3,7 +3,7 @@
 import styles from './TeaserCollectionWrapper.module.scss';
 import Image from 'next/image';
 
-export default function TeaserCollectionWrapper({ slug }) {
+export default function TeaserCollectionWrapper() {
 
   const TeaserElement = ({ url, city, date }) => {
     return (

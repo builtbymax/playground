@@ -1,0 +1,101 @@
+//
+//  TeaserSpaceAnimation.module.scss
+//  ------------------------------------------------------
+
+$teaser__background-color: var(--teaser__background-color, #fff);
+$teaser__border-color: var(--teaser__border-color, #e5e5e5);
+$teaser__text-color: var(--teaser__text-color, #000);
+$teaser__meteor__stroke-color: var(--teaser__meteor__stroke-color, linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 80%));
+
+.teaser-element{
+  width: 100%;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: $teaser__background-color;
+  border: 1px solid $teaser__border-color;
+  aspect-ratio: 1 / 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+
+  &.color-1{
+    --teaser__background-color: #000;
+    --teaser__border-color: #383838;
+    --teaser__text-color: #fff;
+    --teaser__meteor__stroke-color: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 80%);
+  }
+
+  h2, h3, h4, h5, h6, p{ 
+    color: $teaser__text-color;
+    max-width: 85%;
+  }
+
+  h2, h3, h4, h5, h6{ 
+    margin-bottom: 25px; 
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 56px;
+  }
+
+  p{
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  span.meteor{
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transform: rotate(45deg);
+    animation: meteor 4s ease-in-out infinite;
+    will-change: transform;
+    opacity: .5;
+
+    &::before{
+      content: '';
+      display: block;
+      width: 52px;
+      height: 2px;
+      background: $teaser__meteor__stroke-color;
+      position: relative;
+      right: -3px;
+      bottom: 0px;
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 14px;
+      background-color: $teaser__text-color;
+    }
+  }
+
+}
+
+@keyframes meteor {
+  0%{
+    transform: rotate(45deg) translate(0px);
+  }
+  60%{
+    filter: blur(0px);
+  }
+  80% {
+    opacity: .5;
+  }
+  100%{
+    filter: blur(1px);
+    opacity: 0;
+    transform: rotate(45deg) translate(750px);
+  }
+}

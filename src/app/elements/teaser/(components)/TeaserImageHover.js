@@ -3,7 +3,7 @@
 import styles from './TeaserImageHover.module.scss';
 import Image from 'next/image';
 
-export default function TeaserImageHover({ slug }) {
+export default function TeaserImageHover() {
 
   const teaserImageMovement = (e) => {
     const element = e.currentTarget;
