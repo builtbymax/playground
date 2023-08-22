@@ -4,18 +4,32 @@ import styles from './TeaserSpaceAnimation.module.scss';
 
 export default function TeaserSpaceAnimation() {
   
-  const meteorCount = 6;
-  const meteorArray = Array.from(Array(meteorCount).keys());
+  const fallingStarArray = Array.from(Array(6).keys());
+  const sprinklingStarArray = Array.from(Array(8).keys());
 
-  const Meteor = () => {
+  const FallingStar = () => {
     return (
       <span 
-        className={styles.meteor}
+        className={styles['falling-star']}
         style={{
-          top: '-100px',
-          left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
-          animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
-          animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+          top: Math.floor(Math.random() * (-50 - -200) + -200) + 'px',
+          left: Math.floor(Math.random() * (600 - -600) + -600) + 'px',
+          animationDelay: Math.random() * (0.7 - 0.2) + 0.2 + 's',
+          animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + 's',
+        }}
+      />
+    );
+  };
+
+  const SprinklingStar = () => {
+    return (
+      <span 
+        className={styles['sprinkling-star']} 
+        style={{
+          top: Math.floor(Math.random() * (200 - -200)) + 'px',
+          left: Math.floor(Math.random() * (300 - -300)) + 'px',
+          animationDelay: Math.random() * (3 - 1) + 1 + 's',
+          animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + 's',
         }}
       />
     );
@@ -24,7 +38,8 @@ export default function TeaserSpaceAnimation() {
   const TeaserElement = ({ color }) => {
     return (
       <div data-space-teaser className={`${styles['teaser-element']} ${styles[`color-${color}`]}`}>
-        {meteorArray.map((meteor) => <Meteor key={meteor} />)}
+        {fallingStarArray.map((star) => <FallingStar key={star} />)}
+        {sprinklingStarArray.map((star) => <SprinklingStar key={star} />)}
         <h3>Ipsum adipisicing Ipsum</h3>
         <p>
           Do veniam fugiat dolore adipisicing et do non.
