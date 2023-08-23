@@ -1,0 +1,27 @@
+//
+//  Teaser
+//  ---------------------------------------------
+
+$component__teaser__background-color: rgba(var(--base__color-1__rgb), 0.05);
+
+@include media('mobile') {
+
+  .teaser-element-container {
+    width: 100%;
+
+    .teaser-item{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+
+      background-color: $component__teaser__background-color;
+      padding: 25px;
+      border-radius: 6px;
+      gap: 20px;
+    }
+
+  }
+
+}

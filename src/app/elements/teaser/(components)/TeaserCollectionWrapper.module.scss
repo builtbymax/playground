@@ -1,0 +1,139 @@
+//
+//  TeaserCollectionWrapper.module.scss
+//  ------------------------------------------------------
+
+//  Component Styles
+//  -------------------------------------------------------------------------------------------
+
+$element__color-0: #151515;
+$element__color-1: #1E1E1E;
+$element__color-2: #FFF;
+$element__color-3: #2176FF;
+$element__color-4: #D8D8D8;
+
+$teaser__background-color: #F7F4F8;
+$teaser__border-color: rgba(var(--project__color-2__rgb), .1);
+
+
+.teaser-element{
+  background: $teaser__background-color;
+  border-radius: 12px;  
+  border: 1px solid $teaser__border-color;
+  padding: 20px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  min-height: 360px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  .teaser-box-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .box{
+      background-color: $element__color-4;
+      background-size: cover;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 15px 15px 17px;
+      transition: all 0.3s ease-in-out;
+
+      .content-wrapper{
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0px 20px 20px -25px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        padding: 14px;
+
+        $blur: 4px;
+        backdrop-filter: blur(4px);
+        background-color: transparentize($element__color-2, 0.9);
+        
+        transform: scale(1) translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+    
+        @supports not (backdrop-filter: blur($blur)) {
+          background-color: transparentize($element__color-1, 0.4);
+        }
+
+        margin: auto 0 0 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .content-box-logo{
+          background: $element__color-3;
+          box-shadow: 0px 3px 10px -4px #2176FF;
+          $size: 36px;
+          width: $size;
+          height: $size;
+          border-radius: $size * 3;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .text{
+          p, h3{ color: $element__color-2; text-decoration: none; }
+          h3{
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 25px;
+          }
+          p{
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 12px;
+            line-height: 15px;
+            opacity: 0.5;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      // background items
+      &:nth-child(2), &:nth-child(1){        
+        position: absolute;
+        z-index: 0;
+        height: calc(100% - 90px);
+      }
+      &:nth-child(2){ 
+        bottom: 0;
+        $width: 30px;
+        width: calc(100% - #{$width});
+        left: calc(#{$width} / 2);
+        bottom: calc(#{$width} / 2);
+      }
+      &:nth-child(1){ 
+        bottom: 0;
+        $width: 60px;
+        width: calc(100% - #{$width});
+        left: calc(#{$width} / 2);
+        bottom: calc(#{$width} / 2);
+      }
+
+      // foreground item
+      &:nth-child(3){ 
+        position: relative;
+        z-index: 1;
+        height: calc(100% - 90px);
+      }
+    }
+  }
+
+  &:hover{
+    .box{
+      &:nth-child(1){ transform: translate(0, -10px) scale(1.01) rotate(4deg); }
+      &:nth-child(2){ transform: translate(0, -6px) scale(1.01) rotate(2deg); }
+      &:nth-child(3){ transform: scale(1.0154) rotate(0deg); }
+    }
+  }
+}

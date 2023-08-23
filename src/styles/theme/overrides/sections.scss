@@ -1,0 +1,30 @@
+//
+//  Sections
+//  ---------------------------------------------
+
+@include media('mobile') {
+
+  section.section-container{
+    article{
+      width: 100%;
+      border: 1px solid rgba(var(--base__color-1__rgb), .1);
+      padding: 15px;
+      border-radius: 6px;
+      position: relative;
+
+      .element-info{
+        position: absolute;
+        right: 0;
+        top: -35px;
+        @include typo(10, 12);
+        font-weight: $font-weight__bold;
+        color: var(--project__color-2);
+        background-color: rgba(var(--project__color-2__rgb), .08);
+        padding: 6px 8px;
+        border-radius: 4px;
+        z-index: 2;
+      }
+    }
+  }
+
+}
