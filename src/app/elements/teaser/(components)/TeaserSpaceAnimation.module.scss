@@ -13,7 +13,6 @@ $teaser__falling-star__stroke-color: var(--teaser__falling-star__stroke-color, l
   border-radius: 8px;
   background: $teaser__background-color;
   border: 1px solid $teaser__border-color;
-  aspect-ratio: 1 / 1;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -123,6 +122,16 @@ $teaser__falling-star__stroke-color: var(--teaser__falling-star__stroke-color, l
       position: relative;
       top: 2px;
     }
+  }
+
+}
+
+@media (max-width: 768px){}
+
+@media (min-width: 1024px){
+
+  .teaser-element{
+    aspect-ratio: 1 / 1;
   }
 
 }

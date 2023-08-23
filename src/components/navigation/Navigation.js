@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export default function Navigation() {
   return (
-    <nav className="navigation-container">
-      <div className="content-size-sl">
+    <div className="content-size-sl">
+      <nav className="navigation-container">
         <div className="logo">
           <Link href="/">
             <Image
-              src="/playground-logo-color.svg"
+              src="/playground-logo-black.svg"
               alt="Playground Logo"
               width={200}
               height={200}
@@ -16,7 +16,14 @@ export default function Navigation() {
             />
           </Link>
         </div>
-      </div>
-    </nav>
+        <ul className="navigation-list">
+          <li className="navigation-list-item">
+            <Link href="/">
+              Elements
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
