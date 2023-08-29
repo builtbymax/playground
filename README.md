@@ -20,6 +20,8 @@ Here's an overview of what you can expect to find in this repository:
 2. **Component Library**: A collection of reusable components and elements that I have created. These components demonstrate my understanding of modern frontend development practices and design patterns.
 3. **Documentation**: Documentation on various topics, frameworks, libraries, and techniques that I've explored during my learning journey.
 
+You can visit the productive project here: [Playground](https://playground.koby.work).
+
 ## Getting Started
 
 To get started with this project, you'll need to have Node.js and npm installed on your machine. Once you have those installed, you can follow these steps:
