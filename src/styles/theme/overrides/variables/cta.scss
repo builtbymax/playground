@@ -11,10 +11,10 @@
 // $cta__general__default__icon__class: 'has-icon';
 
 $cta__general__border-radius: 3px;
-// $cta__general__padding: 14px 22px;
+$cta__general__padding: 12px 16px;
 // $cta__general__text-transform: none;
 // $cta__general__text-decoration: none;
-// $cta__general__transition: all .25s ease-in-out;
+$cta__general__transition: all .3s ease-in-out;
 // $cta__general__width: auto;
 // $cta__general__height: auto;
 // $cta__general__display: flex;
@@ -22,28 +22,28 @@ $cta__general__border-radius: 3px;
 // $cta__general__justify-content: center;
 // $cta__general__align-items: center;
 
-// $cta__general__font-size: $font-size__s;
-// $cta__general__line-height: $line-height__s;
+$cta__general__font-size: 14;
+$cta__general__line-height: 14;
 // $cta__general__font-weight: $font-weight__semi-bold;
 // $cta__general__font-family: $font-family__base;
 
-// $cta__layout-0__background: base(1);
-// $cta__layout-0__text: base(2);
-// $cta__layout-0__icon: base(2);
+$cta__layout-0__background:  darken(base(4), 03%);
+$cta__layout-0__text: darken(base(4), 50%);
+$cta__layout-0__icon: darken(base(4), 50%);
 // $cta__layout-0__border: 0 none;
-// $cta__layout-0__background__hover: project(1);
-// $cta__layout-0__text__hover: base(2);
-// $cta__layout-0__icon__hover: base(2);
+$cta__layout-0__background__hover: base(2);
+$cta__layout-0__text__hover: darken(base(4), 50%);
+$cta__layout-0__icon__hover: darken(base(4), 50%);
 // $cta__layout-0__border__hover: 0 none;
 
-// $cta__layout-1__background: transparent;
-// $cta__layout-1__text: base(1);
-// $cta__layout-1__icon: base(1);
-// $cta__layout-1__border: 1px solid base(1);
-// $cta__layout-1__background__hover: base(1);
-// $cta__layout-1__text__hover: base(2);
-// $cta__layout-1__icon__hover: base(2);
-// $cta__layout-1__border__hover: 1px solid base(1);
+$cta__layout-1__background: base(2);
+$cta__layout-1__text: project(1);
+$cta__layout-1__icon: project(1);
+$cta__layout-1__border: 0 none;
+$cta__layout-1__background__hover: project(1);
+$cta__layout-1__text__hover: base(2);
+$cta__layout-1__icon__hover: base(2);
+$cta__layout-1__border__hover: 0 none;
 
 // $cta__layout-2__background: transparent;
 // $cta__layout-2__text: base(1);
@@ -59,13 +59,12 @@ $cta__general__border-radius: 3px;
 //  ---------------------------------------------
 
 
-// $cta__general__default__icon-properties: (
-//   width: 20px,
-//   height: 20px,
-//   margin: 15px,
-//   position: 'left',
-//   alignment: 'center',
-// );
+$cta__general__default__icon-properties: (
+  width: null,
+  height: null,
+  margin: 10px,
+  position: 'right',
+);
 
 // $cta__default__properties: (
 //   general: (

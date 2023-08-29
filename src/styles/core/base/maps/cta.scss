@@ -9,6 +9,7 @@ $cta__general__default__icon-properties: map-deep-merge(
     margin: 15px,
     position: 'left',
     alignment: 'center',
+    transition: all 0.3s ease-in-out,
   ), 
   $cta__general__default__icon-properties,
 );

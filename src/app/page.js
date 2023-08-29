@@ -21,17 +21,20 @@ export default function Home() {
     {
       slug: "/elements/button",
       title: "Button",
-      description: "A button."
+      description: "A button.",
+      layout: '0',
     },
     {
       slug: "/elements/teaser",
       title: "Teaser Elements",
-      description: "A collection of teaser element layouts."
+      description: "A collection of teaser element layouts.",
+      layout: '0',
     },
     {
       slug: "/elements/forms",
       title: "Form Elements",
-      description: "A collection of Form elements."
+      description: "A collection of Form elements.",
+      layout: '0',
     },
   ];
 
@@ -46,7 +49,7 @@ export default function Home() {
         <TeaserContainer>
           {teasers.map((teaser, index) => (
             <div key={index} className="grid-col gd-xs-12 gd-m-6 gd-l-4">
-              <Teaser slug={teaser.slug} title={teaser.title} description={teaser.description} />
+              <Teaser slug={teaser.slug} title={teaser.title} description={teaser.description} layout={teaser.layout} />
             </div>
           ))}
         </TeaserContainer>

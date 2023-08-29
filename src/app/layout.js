@@ -10,7 +10,7 @@ export const metadata = {
   manifest: '/site.webmanifest',
   themeColor: '#FF7A6B',
   icons: {
-    favicon: '/favicon.ico',
+    favicon: '/favicon.svg',
     icon: '/favicon.svg',
     apple: '/apple-touch-icon.png',
   },

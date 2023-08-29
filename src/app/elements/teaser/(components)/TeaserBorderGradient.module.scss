@@ -3,8 +3,9 @@
 //  ------------------------------------------------------
 
 $border-radius: 8px;
-$text__color-0: var(--project__color-2);
-$teaser__background-color: #F7F4F8;
+$text__color-0: var(--project__color-1);
+$text__color-1: var(--project__color-2);
+$teaser__background-color: #F5F8FF; // rgba(var(--project__color-2__rgb), .05);
 
 $border-color-0: rgba(var(--project__color-2__rgb), .8);
 $border-color-1: rgba(var(--project__color-2__rgb), .5);
@@ -12,7 +13,7 @@ $border-color-1: rgba(var(--project__color-2__rgb), .5);
 $teaser-element__headline__font: 'Playfair Display', serif;
 
 .teaser-element {
-  --teaser__icon__color: #{$text__color-0};
+  --teaser__icon__color: #{$text__color-1};
   width: 100%;
   flex: 1;
   padding: 35px 30px;

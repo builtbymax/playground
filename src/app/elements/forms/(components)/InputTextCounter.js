@@ -7,7 +7,7 @@ export default function Teaser() {
   const inputPlaceholder = 'Enter your text here...';
   const maxCharacters = 20;
 
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState(maxCharacters);
 
   const countChararacters = (e) => {
     const input = e.target;

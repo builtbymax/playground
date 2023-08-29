@@ -31,7 +31,9 @@
           margin: map-get($icon-properties, margin);
         }
       } @else if ($key != null or $key != false or $key != '' or $value != null or $value != false or $value != '') {
-        #{$key}: $value;
+        @if ($key != margin) {
+          #{$key}: $value;
+        }
       } 
     }
   }
