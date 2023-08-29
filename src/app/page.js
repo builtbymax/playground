@@ -28,6 +28,11 @@ export default function Home() {
       title: "Teaser Elements",
       description: "A collection of teaser element layouts."
     },
+    {
+      slug: "/elements/forms",
+      title: "Form Elements",
+      description: "A collection of Form elements."
+    },
   ];
 
   return (

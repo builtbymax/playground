@@ -1,0 +1,51 @@
+//
+//  InputTextCounter.module.scss
+//  ------------------------------------------------------
+
+$border-radius: 3px;
+$text__color-0: var(--base__color-1);
+$text__color-1: rgba(var(--project__color-2__rgb), .8);
+
+$background-color-0: rgba(var(--project__color-2__rgb), .1);
+
+$border-color-0: rgba(var(--base__color-1__rgb), .2);
+$border-color-1: rgba(var(--project__color-2__rgb), .8);
+$border-color-2: #dc324e;
+
+.input-container{
+  position: relative;
+  width: 100%;
+
+  input.text{
+    &[type="text"]{
+      width: 100%;
+      border: 1px solid $border-color-0;
+      border-radius: $border-radius;
+      color: $text__color-0;
+      padding: 14px 70px 14px 18px;
+      transition: all .3s ease-in-out;
+      &:focus{
+        border-color: $border-color-1;
+        outline: none;
+      }
+    }
+
+    &.error{
+      &:focus{ border-color: $border-color-2; }
+      border-color: $border-color-2;
+    }
+  }
+
+  .counter{
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    color: $text__color-1;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: $background-color-0;
+    padding: 2px 8px;
+    border-radius: $border-radius;
+  }
+}
