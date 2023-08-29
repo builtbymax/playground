@@ -8,7 +8,7 @@ export default function Navigation() {
         <div className="logo">
           <Link href="/">
             <Image
-              src="/playground-logo-black.svg"
+              src="/playground-logo-color.svg"
               alt="Playground Logo"
               width={200}
               height={200}
