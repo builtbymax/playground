@@ -15,9 +15,6 @@ export default function Button() {
     <main>
       <Navigation />
       <Section spacingBottom={false}>
-        <Headline headline="Forms" tag="h1" />
-      </Section>
-      <Section spacingBottom={false}>
         <Headline headline={pageContent.title} subline={pageContent.description} tag={pageContent.tag} inlineComponent={false} />
       </Section>
       <Section>
