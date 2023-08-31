@@ -39,11 +39,15 @@ $project-xml: false; // getMapWithXML($project);
   --font-color__base: #{base(1)};
   --font-color__variant-1: #{base(2)};
   --font-color__variant-2: #{base(3)};
+
+  --headline-color__base: #{project(1)};
 }
 
 $font-color__base: var(--font-color__base);
 $font-color__variant-1: var(--font-color__variant-1);
 $font-color__variant-2: var(--font-color__variant-2);
+
+$headline-color__base: var(--headline-color__base);
 
 
 // ------------------------------------------------------------------------------------------------------------------------------
