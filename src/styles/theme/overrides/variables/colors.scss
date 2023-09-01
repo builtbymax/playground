@@ -37,8 +37,11 @@ $project-xml: false; // getMapWithXML($project);
 
 :root{
   --font-color__base: #{base(1)};
+  --font-color__base__rgb: #{base-rgb(1)};
   --font-color__variant-1: #{base(2)};
+  --font-color__variant-1__rgb: #{base-rgb(2)};
   --font-color__variant-2: #{base(3)};
+  --font-color__variant-2__rgb: #{base-rgb(3)};
 
   --headline-color__base: #{project(1)};
 }

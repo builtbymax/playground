@@ -37,6 +37,12 @@ export default function Home() {
       description: "A collection of Form elements.",
       layout: '0',
     },
+    {
+      slug: "/elements/sections",
+      title: "Sections Elements",
+      description: "A collection of Sections elements.",
+      layout: '0',
+    },
   ];
 
   return (
