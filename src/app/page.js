@@ -1,3 +1,4 @@
+import Header from "@/components/header/Header";
 import Navigation from "@/components/navigation/Navigation";
 import Section from "@/layouts/Section";
 import Headline from "@/components/headline-container/HeadlineContainer";
@@ -8,7 +9,7 @@ export default function Home() {
   const content = {
     page: {
       title: "Playground",
-      tag: 'h1',
+      logo: true,
     },
     section: {
       title: "Elements",
@@ -36,14 +37,18 @@ export default function Home() {
       description: "A collection of Form elements.",
       layout: '0',
     },
+    {
+      slug: "/elements/sections",
+      title: "Sections Elements",
+      description: "A collection of Sections elements.",
+      layout: '0',
+    },
   ];
 
   return (
     <main>
       <Navigation />
-      <Section spacingBottom={false}>
-        <Headline headline={content.page.title} tag={content.page.tag} inlineComponent={false} />
-      </Section>
+      <Header title={content.page.title} logo={content.page.logo} size="l" />
       <Section>
         <Headline headline={content.section.title} subline={content.section.description} tag={content.section.tag} />
         <TeaserContainer>

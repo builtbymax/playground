@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Headline({ headline, subline, tag = 'h2', inlineComponent = true}) {
+export default function Headline({ headline, subline, tag = 'h2', inlineComponent = true, alignment = 'left'}) {
   let headlineElement;
   let sublineElement;
   const HTag = `${tag}`;
@@ -18,7 +18,7 @@ export default function Headline({ headline, subline, tag = 'h2', inlineComponen
   }
 
   return (
-    <div className={`headline-element-container ${inlineComponent ? 'inline-component' : ''}`}>
+    <div className={`headline-element-container alignment-${alignment} ${inlineComponent ? 'inline-component' : 'standalone'}`}>
       {headlineElement}
       {sublineElement}
     </div>

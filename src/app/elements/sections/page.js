@@ -2,13 +2,13 @@ import Navigation from "@/components/navigation/Navigation";
 import Section from "@/layouts/Section";
 import Element from "@/layouts/Element";
 import Headline from "@/components/headline-container/HeadlineContainer";
-import InputTextCounter from "./(components)/InputTextCounter";
+import WaveSection from "./(components)/WaveSection";
 
-export default function Button() {
+export default function Sections() {
   const pageContent = {
-    title: "Forms",
+    title: "Sections",
     tag: 'h1',
-    description: "A collection of Form elements.",
+    description: "A collection of Sections elements.",
   }
 
   return (
@@ -18,9 +18,9 @@ export default function Button() {
         <Headline headline={pageContent.title} subline={pageContent.description} tag={pageContent.tag} inlineComponent={false} />
       </Section>
       <Section>
-        <Headline headline="Input text counter" tag="h2" />
+        <Headline headline="Wave Section" tag="h2" />
         <Element>
-          <InputTextCounter />
+          <WaveSection />
         </Element>
       </Section>
     </main>
