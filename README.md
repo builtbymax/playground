@@ -24,8 +24,6 @@ You can visit the productive project here: [Playground](https://playground.koby.
 
 ## Getting Started
 
-To get started with this project, you'll need to have Node.js and npm installed on your machine. Once you have those installed, you can follow these steps:
-
 - Clone this repository to your local machine.
 - Navigate to the project directory in your terminal.
 - Run `yarn install` to install the project dependencies.
