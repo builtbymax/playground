@@ -6,6 +6,7 @@ import TeaserBorderGradient from "./(components)/TeaserBorderGradient";
 import TeaserImageHover from "./(components)/TeaserImageHover";
 import TeaserCollectionWrapper from "./(components)/TeaserCollectionWrapper";
 import TeaserSpaceAnimation from "./(components)/TeaserSpaceAnimation";
+import ProgressiveBlurTeaser from "./(components)/ProgressiveBlurTeaser";
 
 export default function Teaser() {
   const pageContent = {
@@ -41,6 +42,12 @@ export default function Teaser() {
         <Headline headline="Space like animation teaser" tag="h2" />
         <Element>
           <TeaserSpaceAnimation />
+        </Element>
+      </Section>
+      <Section>
+        <Headline headline="Progressive Blur Teaser" tag="h2" />
+        <Element>
+          <ProgressiveBlurTeaser />
         </Element>
       </Section>
     </main>

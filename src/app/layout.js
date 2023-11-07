@@ -4,12 +4,15 @@ import '../styles/fonts/fontface.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const viewport = {
+  themeColor: '#FF7A6B',
+  viewport: 'width=device-width, initial-scale=1.0 maximum-scale=1.0',
+}
+
 export const metadata = {
   title: 'Playground',
   description: 'There is no limit to play around. ✨',
-  viewport: 'width=device-width, initial-scale=1.0 maximum-scale=1.0',
   manifest: '/site.webmanifest',
-  themeColor: '#FF7A6B',
   icons: {
     favicon: '/favicon.svg',
     icon: '/favicon.svg',
