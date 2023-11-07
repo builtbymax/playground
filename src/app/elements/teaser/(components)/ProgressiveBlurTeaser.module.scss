@@ -1,0 +1,107 @@
+//
+//  ProgressiveBlurTeaser.module.scss
+//  ------------------------------------------------------
+
+.progressive-blur-teaser-element{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  $br: 20px;
+
+  .media{
+    width: 100%;
+    img{
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: $br;
+      object-fit: cover;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: $br;
+      backdrop-filter: blur(10px);
+      mask: linear-gradient(190deg, transparent 25%, black 60%);
+    }
+  }
+
+  .content{
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 30px;
+    .pointer{
+      position: absolute;
+      top: 50%;
+      left: 53%;
+      $w: 12px;
+      $h: 12px;
+      > span:nth-child(1){
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.8);
+        background-color: var(--project__color-2);
+        border: 2px solid var(--base__color-2);
+
+        width: $w;
+        height: $h;
+      }
+      > span:nth-child(2){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, -50%) rotate(45deg) scale(2.4);
+        border-radius: 50%;
+        background-color: var(--project__color-2);
+        opacity: .2;
+
+        width: $w;
+        height: $h;
+        animation: pulse 3s infinite;
+      }
+    }
+    h3{
+      position: relative;
+      margin-bottom: 8px;
+      z-index: 4;
+    }
+    p{
+      position: relative;
+      z-index: 4;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--base__color-1);
+      opacity: .6;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(2.4);
+    opacity: .2;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(2.6);
+    opacity: .3;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(2.4);
+    opacity: .2;
+  }
+}
