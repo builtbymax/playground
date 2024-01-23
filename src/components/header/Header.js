@@ -1,13 +1,17 @@
 import HeaderAnimation from './HeaderAnimation';
-import Headline from "@/components/headline-container/HeadlineContainer";
 import Section from "@/layouts/Section";
-import Image from 'next/image';
+import { Headline, Subline } from "@/components/Page/Headline/Headline";
+import { Button, ButtonContainer } from '@/components/Page/Button/Button';
 
 export default function Header({ logo, title, size }) {
   return (
     <header className={`header size-${size} has-animation`}>
       <Section spacingBottom={true} spacingTop={false}> 
-        <Headline headline={title} subline="Kobys world" tag="h1" />
+        <Headline as="h1">{title}</Headline>
+        <Subline>This is a playground for koby.</Subline>
+        <ButtonContainer alignment="left">
+          <Button href="/">Button</Button>
+        </ButtonContainer>
       </Section>
       <Section spacingBottom={false} spacingTop={false}>
         <HeaderAnimation logo={logo} />

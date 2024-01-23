@@ -1,7 +1,7 @@
 import Header from "@/components/header/Header";
 import Navigation from "@/components/navigation/Navigation";
 import Section from "@/layouts/Section";
-import Headline from "@/components/headline-container/HeadlineContainer";
+import { HeadlineContainer, Headline, Subline } from "@/components/Page/Headline/Headline";
 import TeaserContainer from "@/layouts/TeaserLayout";
 import Teaser from "@/components/teaser/Teaser";
 
@@ -50,7 +50,10 @@ export default function Home() {
       <Navigation />
       <Header title={content.page.title} logo={content.page.logo} size="l" />
       <Section>
-        <Headline headline={content.section.title} subline={content.section.description} tag={content.section.tag} />
+        <HeadlineContainer>
+          <Headline as={content.section.tag}>{content.section.title}</Headline>
+          <Subline>{content.section.description}</Subline>
+        </HeadlineContainer>
         <TeaserContainer>
           {teasers.map((teaser, index) => (
             <div key={index} className="grid-col gd-xs-12 gd-m-6 gd-l-4">
@@ -61,4 +64,4 @@ export default function Home() {
       </Section>
     </main>
   )
-}
+};
