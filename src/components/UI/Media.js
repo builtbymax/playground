@@ -11,7 +11,7 @@ const Media = ({ asset, className, ...props }) => {
       assetRender = <ImageAsset image={asset} {...props} />;
       break;
     case 'video':
-      assetRender = <VideoAsset video={asset} />;
+      assetRender = <VideoAsset video={asset} attributes={props} />;
       videoClass = 'video';
       break;
     default:
