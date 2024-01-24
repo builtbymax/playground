@@ -1,7 +1,7 @@
 import HeaderAnimation from './HeaderAnimation';
 import Section from "@/layouts/Section";
-import { Headline, Subline } from "@/components/Page/Headline/Headline";
-import { Button, ButtonContainer } from '@/components/Page/Button/Button';
+import { Headline, Subline } from "@/components/UI/Headline";
+import { Button, ButtonContainer } from '@/components/UI/Button';
 
 export default function Header({ logo, title, size }) {
   return (

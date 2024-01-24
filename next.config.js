@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     domains: ['picsum.photos', 'images.unsplash.com'],
+  },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
   },
 }
 

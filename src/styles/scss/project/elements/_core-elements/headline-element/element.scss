@@ -13,14 +13,6 @@
 
 @mixin headline-element() {
 
-  @include media('mobile') {
-
-    .headline-element-container{
-      h1,h2,h3,h4,h5,h6{
-        max-width: $headline-element__heading__max-width;
-      }
-    }
-
-  }
+  @include media('mobile') {}
 
 }

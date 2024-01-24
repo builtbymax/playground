@@ -11,15 +11,15 @@
 // $headline__default__additional__class-name: 'heading-style'; 
 // $headline__default__font-weight: $font-weight__regular;
 // $headline__default__font-family: $font-family__variant-1;
-// $headline__default__color: $font-color__base;
+$headline__default__color: var(--font-color__variant-1);
 
 // H1
 //  ---------------------------------------------
 
-// $headline__h1__default__font-size__tablet-down: 24;
-// $headline__h1__default__line-height__tablet-down: 32;
-// $headline__h1__default__font-size__tablet: 32;
-// $headline__h1__default__line-height__tablet: 40;
+$headline__h1__default__font-size__tablet-down: 34;
+$headline__h1__default__line-height__tablet-down: 42;
+$headline__h1__default__font-size__tablet: 64;
+$headline__h1__default__line-height__tablet: 74;
 
 
 // H2

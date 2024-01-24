@@ -1,6 +1,7 @@
 import { cva } from "class-variance-authority";
 import clsx from "clsx";
 import { forwardRef } from "react";
+import Link from "next/link";
 
 const buttonVariants = cva(['cta'], {
     variants: {
@@ -24,7 +25,7 @@ const buttonVariants = cva(['cta'], {
 );
 
 const Button = forwardRef(({ className, variant, size, ...props }, ref) => {
-  const Comp = props.href ? 'a' : 'button';
+  const Comp = props.href ? Link : 'button';
   return (
     (<Comp className={clsx(buttonVariants({ variant, size, className }))} ref={ref} {...props} />)
   );

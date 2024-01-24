@@ -1,9 +1,11 @@
+import { GridRow } from '@/components/UI/Grid';
+
 const TeaserContainer = ({ children }) => {
   return (
     <div className="teaser-element-container">
-      <div className="grid-row">
+      <GridRow>
         {children}
-      </div>
+      </GridRow>
     </div>
   );
 };

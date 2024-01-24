@@ -8,7 +8,7 @@
 $base: (
   1: #000000,
   2: #FFFFFF,
-  3: #0B0B0B,
+  3: #454545,
   4: #898989,
   5: #252525,
   6: #272727,
@@ -47,21 +47,25 @@ $information: (
 $information-rgb: getMapWithRGB($information);
 $information-xml: false; // getMapWithXML($information);
 
-//  Basic Project Variables
+//  Darkmode colors
 //  ---------------------------------------------
 
-:root{
-  --font-color__base: #{base(1)};
-  --font-color__base__rgb: #{base-rgb(1)};
-  --font-color__variant-1: #{base(2)};
-  --font-color__variant-1__rgb: #{base-rgb(2)};
-  --font-color__variant-2: #{base(3)};
-  --font-color__variant-2__rgb: #{base-rgb(3)};
-}
+$base-dark: (
+  1: #FFF,
+  2: #000,
+  3: #0B0B0B,
+  4: #898989,
+  5: #252525,
+  6: #272727,
+  7: #1A1919,
+  8: #141414,
+);
 
-$font-color__base: var(--font-color__base);
-$font-color__variant-1: var(--font-color__variant-1);
-$font-color__variant-2: var(--font-color__variant-2);
+$base-dark-rgb: getMapWithRGB($base-dark);
+
+:root.dark-theme{
+  @include createCSSVariableSet(base, $base-dark, $base-dark-rgb, false);
+}
 
 
 // ------------------------------------------------------------------------------------------------------------------------------

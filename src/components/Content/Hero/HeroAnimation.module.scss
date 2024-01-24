@@ -1,0 +1,126 @@
+//
+//  Element: "hero"
+//  ---------------------------------------------
+
+//  Import global helpers
+//  --------------------------------------------------
+
+@import '@s/scss/project/required.scss';
+
+//  Styles
+//  ---------------------------------------------
+
+@include media('mobile') {
+  
+  .hero-animation-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    .hero-animation-block{
+      position: absolute;
+      transition: transform .3s ease-in-out;
+      will-change: transform;
+      &.element-0{ 
+        filter: blur(3px);
+        left: -10%;
+        bottom: 50%;
+        animation: blur-1 14s infinite forwards ease-in-out;
+        animation-delay: 0;
+      }
+      &.element-1{ 
+        filter: blur(3px); 
+        right: 0;
+        top: -60px;
+        animation: blur-2 8s infinite forwards ease-in-out;
+        animation-delay: 1s;
+      }
+      &.element-2{ 
+        filter: blur(4px); 
+        right: -5%;
+        bottom: -10%;
+        animation: blur-3 10s infinite forwards ease-in-out;
+        animation-delay: 2s;
+      }
+    }
+
+    & + div{
+      text-align: center;
+      animation: hero-animation 10s infinite ease-in-out forwards;
+    }
+  }
+
+}
+
+// max-767
+@include media('tablet-down') {
+
+}
+
+// min-768
+@include media('tablet') {
+
+}
+
+//  Animation
+//  ---------------------------------------------
+
+@keyframes hero-animation {
+  0% {
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+  50% {
+    transform: translate(0, -5%) rotate(0.012deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+}
+
+@keyframes blur-1 {
+  0% {
+    filter: blur(4px);
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+  50% {
+    filter: blur(2px);
+    transform: translate(0, -20%) rotate(0.012deg);
+  }
+  100% {
+    filter: blur(4px);
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+}
+
+@keyframes blur-2 {
+  0% {
+    filter: blur(3px);
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+  50% {
+    filter: blur(1px);
+    transform: translate(0, -20%) rotate(0.012deg);
+  }
+  100% {
+    filter: blur(3px);
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+}
+
+@keyframes blur-3 {
+  0% {
+    filter: blur(4px);
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+  50% {
+    filter: blur(2px);
+    transform: translate(0, -20%) rotate(0.012deg);
+  }
+  100% {
+    filter: blur(4px);
+    transform: translate(0, 0) rotate(0.012deg);
+  }
+}

@@ -1,0 +1,74 @@
+//
+//  Project Imports
+//  ---------------------------------------------
+
+//
+//  ⚠️ Attention:
+//
+//  Do not remove or change the order of the imports
+//  otherwise the compilation could fail / break
+//  The different sections are marked with comments
+//  It's important to keep the order of the imports
+//  because of the dependencies of the variables / maps.
+//
+//  If you want to remove something, you should check
+//  if there is an option in the config.scss file
+//  so you can disable the rendering there.
+//
+//  ---------------------------------------------
+
+// App configuration - import/remove components as needed (see config.scss)
+@import '../core/config.scss'; // ⚠️
+@import 'config.scss'; // 📝 
+
+//  ================    CORE ⚠️     =====================
+//
+// The core mixins are imported at the beginning to allow usage in variables + basic variables
+@import '../core/base/utilities/_utilities.scss';
+@import '../core/base/variables/_base.scss';
+//
+//  ================    CORE-END    =====================
+
+//  ================    PROJECT 📝    ===================
+//
+// All overrides for default variables & maps
+@import 'overrides/variables/typo.scss';
+
+//  Imports mix and match Core Variables
+@import '../core/base/variables/helper.scss';
+
+
+//  Custom Project Variables
+//  (Feel free to add/remove your own variables / files)
+//  ---------------------------------------------
+
+// @import 'overrides/variables/components/_components.scss';
+
+// @import 'overrides/variables/headlines.scss';
+@import 'overrides/variables/container.scss';
+// @import 'overrides/variables/grid.scss';
+// @import 'overrides/variables/cta.scss';
+//
+//  ================    PROJECT-END     =================
+
+//  ================    CORE ⚠️     =====================
+//
+// Core variables, maps & configurations
+@import '../core/base/variables/grid.scss';
+// @import 'cta.scss';
+// @import 'headlines.scss';
+@import '../core/base/variables/container.scss';
+
+@import '../core/base/maps/grid.scss';
+@import '../core/base/maps/container.scss';
+// @import 'headlines.scss';
+// @import 'cta.scss';
+//
+//  ================    CORE-END    =====================
+
+//  ================    PROJECT 📝    ===================
+//
+// All Override styles 
+// @import 'overrides/_overrides.scss';
+//
+//  ================    PROJECT-END     =================

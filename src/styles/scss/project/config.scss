@@ -4,20 +4,21 @@
 
 $elements: (
   'headline-element': true,
-  'text-media-element': true,
-  'media-element': true,
-  'text-element': true,
-  'accordion-element': true,
+
+  'text-media-element': false,
+  'media-element': false,
+  'text-element': false,
+  'accordion-element': false,
   'banner-element': false,
   'counter-element': false,
   'teaser-element': false,
   'card-element': false,
-  'download-element': true,
+  'download-element': false,
   'logo-grid-element': false,
   'stage-element': false,
   'tab-element': false,
   'quotation-element': false,
-  'hotspots-element': true,
+  'hotspots-element': false,
 );
 
 $contents: (
@@ -26,10 +27,10 @@ $contents: (
   'cta-container': true,
   'sections': true,
   'media-element': true,
-  'accessibility': true,
+  'accessibility': false,
   'default-typo': true,
-  'default-table': true,
-  'forms': true,
+  'default-table': false,
+  'forms': false,
 );
 
 $appConfiguration: (
