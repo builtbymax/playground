@@ -1,0 +1,51 @@
+//
+//  Content Sizes
+//  ---------------------------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+// $content-size__gap__tablet-down: 20px;
+// $content-size__gap__tablet: 30px;
+// $content-size__margin: 0 auto;
+// $content-size__width: 100%;
+
+//  Maps
+//  ---------------------------------------------
+
+// $content-sizes: (
+//   content-size-xs: 320px,
+//   content-size-s: 430px,
+//   content-size-sm: 640px,
+//   content-size-m: 1140px,
+//   content-size-sl: 1220px,
+//   content-size-l: 1440px,
+//   content-size-xl: 1640px,
+//   content-size-xxl: 1920px,
+// );
+
+
+//  ---------------------------------------------
+//
+//
+//  🛑 EXAMPLES 🛑
+//
+//
+//  ---------------------------------------------
+
+// you can also add or override the sizes variables with a map (content-size-xxxl is a new key)
+// all other keys will stay untouched and work as before
+
+// $content-sizes: (
+//   content-size-xxxl: 2260px,
+// );
+
+// If you want to override a size you can do it like this:
+// Override the existing keys with new values (you can see the original values in the map above)
+
+// $content-sizes: (
+//   content-size-m: 960px,
+//   content-size-sl: 4400px,
+// );
+
+// $content-sizes: false; // disable the general generated styles for all sizes

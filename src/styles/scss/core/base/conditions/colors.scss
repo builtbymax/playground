@@ -1,0 +1,16 @@
+//
+//  Colors
+//  ---------------------------------------------
+
+@if (map-get($appConfiguration, css-colors) == true) {
+  
+  // Create the CSS Variable set
+  // ----------------------------------------------
+
+  :root{
+    @include createCSSVariableSet(base, $base, $base-rgb, $base-xml);
+    @include createCSSVariableSet(project, $project, $project-rgb, $project-xml);
+    @include createCSSVariableSet(information, $information, $information-rgb, $information-xml);
+  }
+
+}

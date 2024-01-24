@@ -1,0 +1,91 @@
+//
+//  General Project Colors
+//  ---------------------------------------------
+
+//  Base colors
+//  ---------------------------------------------
+
+$base: (
+  1: #000000,
+  2: #FFFFFF,
+  3: #0B0B0B,
+  4: #898989,
+  5: #252525,
+  6: #272727,
+  7: #1A1919,
+  8: #141414,
+);
+
+// Create RGB & XML map if needed
+$base-rgb: getMapWithRGB($base);
+$base-xml: false; // getMapWithXML($base);
+
+//  Project colors
+//  ---------------------------------------------
+
+$project: (
+  1: #0062FF,
+  2: #CD0F48,
+  // 3: skyblue,
+);
+
+// Create RGB & XML map if needed
+$project-rgb: getMapWithRGB($project);
+$project-xml: false; // getMapWithXML($project);
+
+//  Information colors
+//  ---------------------------------------------
+
+$information: (
+  1: #FF4136, // error
+  2: #FFA500, // warning
+  3: #2ECC40, // success
+  4: #0074D9, // info
+) !default;
+
+// Create RGB & XML map if needed
+$information-rgb: getMapWithRGB($information);
+$information-xml: false; // getMapWithXML($information);
+
+//  Basic Project Variables
+//  ---------------------------------------------
+
+:root{
+  --font-color__base: #{base(1)};
+  --font-color__base__rgb: #{base-rgb(1)};
+  --font-color__variant-1: #{base(2)};
+  --font-color__variant-1__rgb: #{base-rgb(2)};
+  --font-color__variant-2: #{base(3)};
+  --font-color__variant-2__rgb: #{base-rgb(3)};
+}
+
+$font-color__base: var(--font-color__base);
+$font-color__variant-1: var(--font-color__variant-1);
+$font-color__variant-2: var(--font-color__variant-2);
+
+
+// ------------------------------------------------------------------------------------------------------------------------------
+
+
+//
+//   🛑 Example for a new color map 🛑
+// ---------------------------------------------
+
+//  If you want to introduce completly new colors, you can do it by creating a new map
+//  Copy the mechanism from above and create a new color map
+//  Then add the new color map to the createCSSVariableSet mixin
+//  Replace "alternate" with the color map you want to create (like base or project)
+//  You dont need to add "base" or "project" to the mixin, because they are already included in core
+//  Below you can see an example for a new color map called "alternate":
+
+// $alternate: (
+//   1: #FFF,
+//   2: #000,
+// );
+
+// $project-rgb: getMapWithRGB($alternate);
+// $project-xml: false; // getMapWithXML($alternate);
+
+// :root{
+//   @include createCSSVariableSet(alternate, $alternate, $alternate-rgb, $alternate-xml);
+// }

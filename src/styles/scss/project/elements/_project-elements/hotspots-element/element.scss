@@ -1,0 +1,235 @@
+//
+//  "Hotspots" Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin hotspots-element() {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $hotspots-element__container__width: 100%;
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .hotspots-element-container{
+      width: $hotspots-element__container__width;
+      .hotspots-element-wrapper{
+        .hotspots-list{
+          .hotspots-item{
+            --hotspots-element__item__point__size: 40px;
+          }
+        }
+
+        .media{
+          &.content-image{
+            img{
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .hotspots-element-container{
+      .hotspots-element-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .hotspots-list{
+          order: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .hotspots-item{
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--base__color-1);
+            &:last-child{ padding-bottom: 0; border-bottom: none; }
+            .hotspots-point{ display: none; }
+            .hotspots-content{
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              .headline, h2,h3,h4,h5,h6{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 15px;
+                @include font(18, 22);
+                .mobile-toggle {
+                  box-sizing: border-box;
+                  display: block;
+                  margin-top: 3px;
+                  transform: scale(1);
+                  $size: 22px;
+                  width: $size;
+                  min-width: $size;
+                  height: $size;
+                  transition: transform .25s ease-in-out;
+                  &::after, &::before {
+                    content: "";
+                    display: block;
+                    box-sizing: border-box;
+                    position: absolute;
+                    bottom: 4px;
+                  }
+                  &::after {
+                    width: 8px;
+                    height: 8px;
+                    border-bottom: 2px solid;
+                    border-left: 2px solid;
+                    transform: rotate(-45deg);
+                    left: 7px;
+                  }
+                  &::before {
+                    width: 2px;
+                    height: 16px;
+                    left: 10px;
+                    background: var(--base__color-1);
+                  }
+                }
+              }
+
+              p, .text, .copy-text{
+                display: none;
+                padding: 0;
+                margin: 0;
+                @include font(16, 22);
+              }
+            }
+            &.active{
+              .hotspots-content{
+                .headline, h2,h3,h4,h5,h6{
+                  .mobile-toggle{
+                    transform: rotate(180deg);
+                  }
+                }
+                p, .text, .copy-text{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .media{
+          order: 2;
+        }
+      }
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .hotspots-element-container{
+      .hotspots-element-wrapper{
+        position: relative;
+        .hotspots-list{
+          .hotspots-item{
+            .hotspots-point{
+              position: absolute;
+              z-index: 1;
+              width: var(--hotspots-element__item__point__size);
+              height: var(--hotspots-element__item__point__size);
+              border-radius: 50%;
+              background-color: var(--project__color-1);
+              cursor: pointer;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              transition: transform .25s ease-in-out;
+
+              .icon-css-plus{
+                display: block; 
+                width: 15px;
+                height: 15px;
+                position: relative;
+                transition: transform .25s ease-in-out;
+                &:before, &:after{
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  width: 2px;
+                  height: 100%;
+                  background-color: var(--base__color-2);
+                  transform: translate(-50%, -50%);
+                  transform-origin: center center;
+                }
+                &:after{
+                  transform: translate(-50%, -50%) rotate(90deg);
+                }
+              }
+              &:hover{
+                transform: scale(1.1);
+              }
+            }
+
+            .hotspots-content{
+              position: absolute;
+              z-index: 2;
+              display: none;
+              background-color: var(--base__color-2);
+              padding: 20px;
+              border-radius: 4px;
+              flex-direction: column;
+              gap: 8px;
+              max-width: 280px;
+
+              // use the point size to calculate the spacing between the point and the content
+              $contentSpacing: calc(#{var(--hotspots-element__item__point__size)} / 2);
+              &.direction-from-left{ margin-left: $contentSpacing; }
+              &.direction-from-right{ margin-right: $contentSpacing; }
+              &.direction-from-top{ margin-top: $contentSpacing; }
+              &.direction-from-bottom{ margin-bottom: $contentSpacing; }
+
+              .headline, h2,h3,h4,h5,h6{
+                .mobile-toggle{ display: none; }
+                @include font(20, 24);
+              }
+
+              p, .text, .copy-text{
+                padding: 0;
+                margin: 0;
+                @include font(16, 22);
+              }
+            }
+
+            &.active{
+              .hotspots-point{
+                .icon-css-plus{
+                  transform: rotate(45deg);
+                }
+              }
+              .hotspots-content{
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

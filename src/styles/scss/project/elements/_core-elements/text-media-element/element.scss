@@ -1,0 +1,94 @@
+//
+//  Text-Media Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin text-media-element() {
+
+  @include media('mobile') {
+
+    .text-media-element-container, .form-element-container{
+      .media{
+        &.content-image{
+          img{
+            border-radius: 10px;
+          }
+        }
+      }
+  
+      .blur-media-column{
+        position: relative;
+        .gradient-blur{
+          position: absolute;
+          z-index: -1;
+          right: 0;
+          top: 0;
+          width: 75%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .blur{
+            width: 450px;
+            height: 450px;
+            background-color: #FFD89A;
+            filter: blur(110px);
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+
+  }
+
+  // max-768
+  @include media('tablet-down') {
+
+    .text-image-component, .form-component{
+      &.with-blur-effect{
+        overflow: hidden;
+      }
+
+      .text-media-element-container{
+        .media-column{
+          order: 1;
+        }
+        .text-column{
+          order: 2;
+        }
+      }
+    }
+    
+  }
+
+  // min-768
+  @include media('tablet') {
+    .text-media-element-container{
+      .text-column{
+        &.vertical-align-center{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @include media('tablet-wide-down') {
+    
+    .text-image-component{
+      overflow: hidden;
+    }
+
+  }
+
+}

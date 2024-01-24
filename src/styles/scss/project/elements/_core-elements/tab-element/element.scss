@@ -1,0 +1,20 @@
+//
+//  Tab Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin tab-element() {
+
+  @include media('mobile') {
+
+  }
+
+}

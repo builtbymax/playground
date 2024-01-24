@@ -1,0 +1,30 @@
+//
+//  Media Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin media-element() {
+
+  @include media('mobile') {
+
+    .media-element-container{
+      .media{
+        &.content-image{
+          img{
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+
+  }
+
+}

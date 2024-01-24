@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import '../styles/theme/app.scss';
+import '../styles/scss/project/app.scss';
 import '../styles/fonts/fontface.css';
 
 

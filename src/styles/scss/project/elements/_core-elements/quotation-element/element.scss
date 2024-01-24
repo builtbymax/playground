@@ -1,0 +1,20 @@
+//
+//  Quotation Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin quotation-element() {
+
+  @include media('mobile') {
+
+  }
+
+}
