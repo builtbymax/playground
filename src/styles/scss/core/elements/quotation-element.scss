@@ -1,0 +1,139 @@
+//
+//  Element: "Quotation"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'quotation-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $quotation-element__container__class: 'quotation-element-container' !default;
+  $quotation-element__container__width: 100% !default;
+  $quotation-element__container__display: flex !default;
+
+  $quotation-element__container__flex-flow__tablet-down: column !default;
+  $quotation-element__container__align-items__tablet-down: flex-start !default;
+  $quotation-element__container__justify-content__tablet-down: flex-start !default;
+  $quotation-element__container__gap__tablet-down: 20px !default;
+
+  $quotation-element__container__flex-flow__tablet: row wrap !default;
+  $quotation-element__container__align-items__tablet: flex-start !default;
+  $quotation-element__container__justify-content__tablet: center !default;
+  $quotation-element__container__gap__tablet: 40px !default;
+
+  $quotation-element__container__media__max-width: 250px !default;
+
+  $quotation-element__container__content__flex: 1 !default;
+  $quotation-element__container__content__display: flex !default;
+  $quotation-element__container__content__flex-direction: column !default;
+  $quotation-element__container__content__gap: 20px !default;
+  $quotation-element__container__content__align-items: flex-start !default;
+  $quotation-element__container__content__width: 100% !default;
+  $quotation-element__container__content__max-width: 650px !default;
+
+  $quotation-element__container__content-block__quote__width: 20px !default;
+  $quotation-element__container__content-block__quote__min-width: 20px !default;
+  $quotation-element__container__content-block__quote__img__width: 100% !default;
+
+
+  $quotation-element__container__content-block__blockquote__padding: 0 !default;
+  $quotation-element__container__content-block__blockquote__margin: 0 !default;
+  $quotation-element__container__content-block__blockquote__font-size: $font-size__l !default;
+  $quotation-element__container__content-block__blockquote__line-height: $line-height__l !default;
+  $quotation-element__container__content-block__blockquote__font-weight: false !default;
+  $quotation-element__container__content-block__blockquote__font-family: false !default;
+  $quotation-element__container__content-block__blockquote__text-color: false !default;
+
+  $quotation-element__container__content-block__additional-content__source__font-size: $font-size__xs !default;
+  $quotation-element__container__content-block__additional-content__source__line-height: $line-height__xs !default;
+  $quotation-element__container__content-block__additional-content__source__font-weight: false !default;
+  $quotation-element__container__content-block__additional-content__source__font-family: false !default;
+  $quotation-element__container__content-block__additional-content__source__text-color: false !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .#{$quotation-element__container__class}{
+      width: $quotation-element__container__width;
+      display: $quotation-element__container__display;
+
+      .quotation-media{
+        max-width: $quotation-element__container__media__max-width;
+      }
+
+      .quotation-content{
+        flex: $quotation-element__container__content__flex;
+        display: $quotation-element__container__content__display;
+        flex-direction: $quotation-element__container__content__flex-direction;
+        gap: $quotation-element__container__content__gap;
+        align-items: $quotation-element__container__content__align-items;
+        width: $quotation-element__container__content__width;
+        max-width: $quotation-element__container__content__max-width;
+
+        .quote{
+          .quote-icon{
+            width: $quotation-element__container__content-block__quote__width;
+            min-width: $quotation-element__container__content-block__quote__min-width;
+            svg, img{
+              width: $quotation-element__container__content-block__quote__img__width;
+            }
+          }
+
+          blockquote{
+            padding: $quotation-element__container__content-block__blockquote__padding;
+            margin: $quotation-element__container__content-block__blockquote__margin;
+            @include typo(
+              $fontSizeValue: $quotation-element__container__content-block__blockquote__font-size,
+              $lineHeightValue: $quotation-element__container__content-block__blockquote__line-height,
+              $fontWeightValue: $quotation-element__container__content-block__blockquote__font-weight,
+              $fontFamilyValue: $quotation-element__container__content-block__blockquote__font-family,
+              $textColor: $quotation-element__container__content-block__blockquote__text-color,
+            );
+          }
+        }
+
+        .additional-content{
+          .source, .source-info{
+            @include typo(
+              $fontSizeValue: $quotation-element__container__content-block__additional-content__source__font-size,
+              $lineHeightValue: $quotation-element__container__content-block__additional-content__source__line-height,
+              $fontWeightValue: $quotation-element__container__content-block__additional-content__source__font-weight,
+              $fontFamilyValue: $quotation-element__container__content-block__additional-content__source__font-family,
+              $textColor: $quotation-element__container__content-block__additional-content__source__text-color,
+            );
+          
+          }
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {
+
+    .#{$quotation-element__container__class}{
+      flex-flow: $quotation-element__container__flex-flow__tablet-down;
+      align-items: $quotation-element__container__align-items__tablet-down;
+      justify-content: $quotation-element__container__justify-content__tablet-down;
+      gap: $quotation-element__container__gap__tablet-down;
+    }
+
+  }
+
+  // min-768
+  @include media('tablet') {
+
+    .#{$quotation-element__container__class}{
+      flex-flow: $quotation-element__container__flex-flow__tablet;
+      align-items: $quotation-element__container__align-items__tablet;
+      justify-content: $quotation-element__container__justify-content__tablet;
+      gap: $quotation-element__container__gap__tablet;
+    }
+
+  }
+
+}

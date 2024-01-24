@@ -1,0 +1,45 @@
+//
+//  Configuration: Project
+//  ---------------------------------------------
+
+$elements: (
+  'headline-element': true,
+
+  'text-media-element': false,
+  'media-element': false,
+  'text-element': false,
+  'accordion-element': false,
+  'banner-element': false,
+  'counter-element': false,
+  'teaser-element': false,
+  'card-element': false,
+  'download-element': false,
+  'logo-grid-element': false,
+  'stage-element': false,
+  'tab-element': false,
+  'quotation-element': false,
+  'hotspots-element': false,
+);
+
+$contents: (
+  'general': true,
+  'lists': true,
+  'cta-container': true,
+  'sections': true,
+  'media-element': true,
+  'accessibility': false,
+  'default-typo': true,
+  'default-table': false,
+  'forms': false,
+);
+
+$appConfiguration: (
+  css-colors: true,
+  elements: $elements,
+  contents: $contents,
+  flex-grid: false,
+  css-grid: true,
+  container-sizes: true,
+  default-cta: true,
+  default-headlines: true,
+);

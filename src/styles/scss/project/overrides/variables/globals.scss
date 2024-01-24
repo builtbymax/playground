@@ -1,0 +1,23 @@
+//  Global Project CSS-Variables
+//  ---------------------------------------------
+
+:root{
+  --font-color__base: #{base(3)};
+  --font-color__base__rgb: #{base-rgb(3)};
+  --font-color__variant-1: #{base(1)};
+  --font-color__variant-1__rgb: #{base-rgb(1)};
+  --font-color__variant-2: #{base(3)};
+  --font-color__variant-2__rgb: #{base-rgb(3)};
+
+  --font-family__base: $font-family__base;
+  --font-family__variant-1: $font-family__variant-1;
+  --font-family__variant-2: $font-family__variant-2;
+}
+
+
+//  Global Project SCSS-Variables
+//  ---------------------------------------------
+
+$font-color__base: var(--font-color__base);
+$font-color__variant-1: var(--font-color__variant-1);
+$font-color__variant-2: var(--font-color__variant-2);

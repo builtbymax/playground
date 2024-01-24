@@ -1,67 +1,74 @@
-import Header from "@/components/header/Header";
-import Navigation from "@/components/navigation/Navigation";
-import Section from "@/layouts/Section";
-import { HeadlineContainer, Headline, Subline } from "@/components/Page/Headline/Headline";
-import TeaserContainer from "@/layouts/TeaserLayout";
+import { Section, ContentSize } from "@/components/UI/Section";
+import { HeadlineContainer, Headline, Subline, Roofline } from "@/components/UI/Headline";
+import { GridColumn, GridRow } from '@/components/UI/Grid';
+import { Hero } from "@/components/Content/Hero/Hero";
+
 import Teaser from "@/components/teaser/Teaser";
 
 export default function Home() {
-  const content = {
-    page: {
-      title: "Playground",
-      logo: true,
-    },
-    section: {
-      title: "Elements",
-      description: "A collection of items.",
-      tag: 'h2',
-    },
-  };
-
-  const teasers = [
-    {
-      slug: "/elements/button",
-      title: "Button",
-      description: "A button.",
-      layout: '0',
-    },
-    {
-      slug: "/elements/teaser",
-      title: "Teaser Elements",
-      description: "A collection of teaser element layouts.",
-      layout: '0',
-    },
-    {
-      slug: "/elements/forms",
-      title: "Form Elements",
-      description: "A collection of Form elements.",
-      layout: '0',
-    },
-    {
-      slug: "/elements/sections",
-      title: "Sections Elements",
-      description: "A collection of Sections elements.",
-      layout: '0',
-    },
-  ];
-
   return (
     <main>
-      <Navigation />
-      <Header title={content.page.title} logo={content.page.logo} size="l" />
+      <Hero />
       <Section>
-        <HeadlineContainer>
-          <Headline as={content.section.tag}>{content.section.title}</Headline>
-          <Subline>{content.section.description}</Subline>
-        </HeadlineContainer>
-        <TeaserContainer>
-          {teasers.map((teaser, index) => (
-            <div key={index} className="grid-col gd-xs-12 gd-m-6 gd-l-4">
-              <Teaser slug={teaser.slug} title={teaser.title} description={teaser.description} layout={teaser.layout} />
-            </div>
-          ))}
-        </TeaserContainer>
+        <ContentSize>
+          <HeadlineContainer>
+            <Roofline>{content.section.roofline}</Roofline>
+            <Headline as={content.section.tag}>{content.section.title}</Headline>
+            <Subline>{content.section.description}</Subline>
+          </HeadlineContainer>
+          <Headline as="h2">Coming back soon..</Headline>
+          {/* <div className="teaser-element-container">
+            <GridRow>
+              {teasers.map((teaser, index) => (
+                <GridColumn key={index} columnSize={{ m: 6, l: 4, }}>
+                  <Teaser slug={teaser.slug} title={teaser.title} description={teaser.description} layout={teaser.layout} />
+                </GridColumn>
+              ))}
+            </GridRow>
+          </div> */}
+        </ContentSize>
       </Section>
     </main>
   )
 };
+
+// <Header title={content.page.title} logo={content.page.logo} size="l" />
+
+//  Content
+//  ------------------------------------------------------------
+
+const content = {
+  section: {
+    roofline: "Most recent",
+    title: "Elements",
+    description: "A collection of items.",
+    tag: 'h2',
+  },
+};
+
+const teasers = [
+  {
+    slug: "/elements/button",
+    title: "Button",
+    description: "A button.",
+    layout: '0',
+  },
+  {
+    slug: "/elements/teaser",
+    title: "Teaser Elements",
+    description: "A collection of teaser element layouts.",
+    layout: '0',
+  },
+  {
+    slug: "/elements/forms",
+    title: "Form Elements",
+    description: "A collection of Form elements.",
+    layout: '0',
+  },
+  {
+    slug: "/elements/sections",
+    title: "Sections Elements",
+    description: "A collection of Sections elements.",
+    layout: '0',
+  },
+];

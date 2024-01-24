@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
-import '../styles/theme/app.scss';
 import '../styles/fonts/fontface.css';
+import '../styles/scss/project/app.scss';
+import Navigation from '@/components/Common/Navigation/Navigation';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,8 +24,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="light-theme">
       <body className={inter.className}>
+        <Navigation />
         {children}
       </body>
     </html>

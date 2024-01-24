@@ -1,0 +1,91 @@
+//
+//  Forms
+// ---------------------------------------------
+
+// $component__forms__heading__margin: 0 0 15px 0;
+
+// $component__forms__group__margin: 0 0 30px 0;
+
+// $component__forms__label__font-size: 14;
+// $component__forms__label__line-height: 16;
+// $component__forms__label__font-weight: $font-weight__semi-bold;
+// $component__forms__label__font-family: $font-family__base;
+// $component__forms__label__font-color: var(--base__color-1);
+// $component__forms__label__margin: 0 0 10px 0;
+// $component__forms__label__display: block;
+
+// $component__forms__input__default__width: 100%;
+// $component__forms__input__default__padding: 12px 14px;
+// $component__forms__input__default__border-radius: 3px;
+// $component__forms__input__default__border: 1px solid var(--base__color-1);
+// $component__forms__input__default__appearance: none;
+// $component__forms__input__default__font-size: 16;
+// $component__forms__input__default__line-height: 22;
+// $component__forms__input__default__font-weight: $font-weight__regular;
+// $component__forms__input__default__font-family: $font-family__base;
+// $component__forms__input__default__font-color: var(--base__color-1);
+
+// $component__forms__textarea__default__width: 100%;
+// $component__forms__textarea__default__padding: 12px 14px;
+// $component__forms__textarea__default__border-radius: 3px;
+// $component__forms__textarea__default__border: 1px solid var(--base__color-1);
+// $component__forms__textarea__default__resize: vertical;
+// $component__forms__textarea__default__appearance: none;
+// $component__forms__textarea__default__font-size: 16;
+// $component__forms__textarea__default__line-height: 22;
+// $component__forms__textarea__default__font-weight: $font-weight__regular;
+// $component__forms__textarea__default__font-family: $font-family__base;
+// $component__forms__textarea__default__font-color: var(--base__color-1);
+
+// $component__forms__select__default__width: 100%;
+// $component__forms__select__default__padding: 12px 14px;
+// $component__forms__select__default__border-radius: 3px;
+// $component__forms__select__default__border: 1px solid var(--base__color-1);
+// $component__forms__select__default__appearance: none;
+// $component__forms__select__default__background-image: url("data:image/svg+xml,%3Csvg height='18' viewBox='0 0 18 18' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0 5.613 5.581c.0723694.07421405.1135278.17335209.115.277-.00029917.10329987-.04167362.20223878-.115.275l-5.613 5.582' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' transform='matrix(0 1 -1 0 14.7215 5.9935)'/%3E%3C/svg%3E") !important;
+// $component__forms__select__default__background-repeat: no-repeat;
+// $component__forms__select__default__background-position: right 20px center;
+// $component__forms__select__default__background-size: 18px;
+// $component__forms__select__default__font-size: 16;
+// $component__forms__select__default__line-height: 22;
+// $component__forms__select__default__font-weight: $font-weight__regular;
+// $component__forms__select__default__font-family: $font-family__base;
+// $component__forms__select__default__font-color: var(--base__color-1);
+
+// $component__forms__error__border: 1px solid  var(--information__color-1);
+
+// $component__forms__disabled__font-color: var(--base__color-4);
+// $component__forms__disabled__border: 1px solid var(--base__color-4);
+// $component__forms__disabled__cursor: not-allowed;
+// $component__forms__disabled__pointer-events: none;
+
+// $component__forms__checkbox__label__default__font-size: 14;
+// $component__forms__checkbox__label__default__line-height: 18;
+// $component__forms__checkbox__label__default__font-weight: $font-weight__regular;
+// $component__forms__checkbox__label__default__font-family: $font-family__base;
+// $component__forms__checkbox__label__default__font-color: var(--base__color-1);
+// $component__forms__checkbox__label__default__margin: 0 0 8px 0;
+// $component__forms__checkbox__label__default__display: flex;
+// $component__forms__checkbox__label__default__flex-direction: row;
+// $component__forms__checkbox__label__default__align-items: flex-start;
+// $component__forms__checkbox__label__default__justify-content: flex-start;
+
+// $component__forms__checkbox__input__default__margin: 0 12px 0 0;
+// $component__forms__checkbox__input__default__min-width: 15px;
+// $component__forms__checkbox__input__default__accent-color: var(--base__color-1);
+
+// $component__forms__submit__default__width: auto;
+// $component__forms__submit__default__padding: 8px 12px;
+// $component__forms__submit__default__border-radius: 3px;
+// $component__forms__submit__default__border: 1px solid var(--base__color-1);
+// $component__forms__submit__default__appearance: none;
+// $component__forms__submit__default__background-color: transparent;
+// $component__forms__submit__default__font-size: 16;
+// $component__forms__submit__default__line-height: 22;
+// $component__forms__submit__default__font-weight: $font-weight__regular;
+// $component__forms__submit__default__font-family: $font-family__base;
+// $component__forms__submit__default__font-color: var(--base__color-1);
+// $component__forms__submit__default__cursor: pointer;
+// $component__forms__submit__default__transition: all 0.3s ease-in-out;
+// $component__forms__submit__default__background-color__hover: var(--base__color-1);
+// $component__forms__submit__default__font-color__hover: var(--base__color-2);

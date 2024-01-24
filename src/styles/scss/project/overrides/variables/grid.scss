@@ -1,0 +1,155 @@
+//
+//  Grid & Media Query Configuration
+//  ---------------------------------------------
+
+//
+//  All these following variables and maps can be 
+//  overriden to change your grid style 
+//  (depending if you have flex or css-grid)
+//
+//  ---------------------------------------------
+
+
+//
+//  General Grid & Media Query Configuration
+//  ---------------------------------------------
+
+//  Maps
+//  (Below are examples how to override the default values - end of this file)
+//  ---------------------------------------------
+
+//  Media Queries
+
+// $sizes: (
+//   mobile-down: 0,
+//   mobile: 0,
+//   smart-down: 419px,
+//   smart: 420px,
+//   tablet-down: 767px,
+//   tablet: 768px,
+//   tablet-wide-down: 1023px,
+//   tablet-wide: 1024px,
+//   desktop-down: 1219px,
+//   desktop: 1220px,
+//   desktop-m-down: 1439px,
+//   desktop-m: 1440px,
+//   desktop-wide-down: 1659px,
+//   desktop-wide: 1660px,
+// );
+
+//  Grid Classes
+
+// $grid-classes: (
+//   mobile: 'xs',
+//   smart: 's',
+//   tablet: 'm',
+//   tablet-wide: 'l',
+//   desktop: 'xl',
+//   desktop-m: 'xxl',
+//   desktop-wide: 'xxxl',
+// );
+
+
+//
+//  CSS Grid Configuration (Default)
+//  ---------------------------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+
+// $css-grid__columns: 12;
+
+// $css-grid__gutter: 20px;
+// $css-grid__gap__row: $css-grid__gutter;
+// $css-grid__gap__col: $css-grid__gutter;
+
+// $css-grid__column-class__prefix: 'gd-';
+// $css-grid__row__class: 'grid-row';
+// $css-grid__col__class: 'grid-col';
+
+
+//  Maps
+//  ---------------------------------------------
+
+// $css-grid__row__properties: (
+//   display: grid,
+//   grid-template-columns: repeat($css-grid__columns, 1fr),
+//   grid-row-gap: $css-grid__gap__row,
+//   grid-column-gap: $css-grid__gap__col,
+// );
+
+// $css-grid__col__properties: (
+//   display: flex,
+//   flex-direction: column,
+// );
+
+
+//
+//  Flex Grid Configuration
+//  ---------------------------------------------
+
+//  Variables
+//  ---------------------------------------------
+
+// $flex-grid__columns: 12;
+// $flex-grid__column-class__prefix: 'fx-';
+
+// $flex-grid__row__class: 'flex-row';
+// $flex-grid__col__class: 'flex-col';
+
+// $flex-grid__col-display: flex;
+// $flex-grid__col-flex-wrap: wrap;
+
+// $flex-grid__gutter: 15px;
+// $flex-grid__gap__row: $flex-grid__gutter;
+// $flex-grid__gap__col: $flex-grid__gutter;
+
+
+// $flex-grid__column-alignment: true;
+// $flex-grid__col-start: flex-start;
+// $flex-grid__col-end: flex-end;
+// $flex-grid__col-center: center;
+// $flex-grid__col-align-center: center;
+// $flex-grid__col-align-start: flex-start;
+// $flex-grid__col-align-end: flex-end;
+
+
+//  Maps
+//  ---------------------------------------------
+
+// $flex-grid__column__properties: ();
+
+
+//  ---------------------------------------------
+//
+//
+//  🛑 EXAMPLES 🛑
+//
+//
+//  ---------------------------------------------
+
+// you can also add or override the sizes/grid variables with a map (wide is a new key)
+// all other keys will stay untouched and work as before
+
+// $sizes: (
+//   ultra-wide-down: 2259px,
+//   ultra-wide: 2260px,
+// );
+
+// If you want to override a size or grid-class you can do it like this:
+// Override the existing keys with new values (you can see the original values in the maps above - top of this file)
+
+// $sizes: (
+//   tablet-down: 2259px,
+//   tablet: 2260px,
+// );
+
+// $grid-classes: (
+//   mobile: 'imNew',
+//   tablet: 'alsoNew',
+// );
+
+
+// ! be aware this will break the media query & grid system if have these enabled in config.scss
+// $sizes: false; // disable the general generated styles for all sizes

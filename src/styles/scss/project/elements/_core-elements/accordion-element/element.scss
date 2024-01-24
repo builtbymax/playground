@@ -1,0 +1,101 @@
+//
+//  Accordion Element
+//  ---------------------------------------------
+
+//  Variables
+//  ----------------------------------
+
+@import 'variables.scss';
+
+
+//  Styles
+//  ----------------------------------
+
+@mixin accordion-element() {
+
+  @include media('mobile') {
+
+    .accordion-component{
+      z-index: 0;
+    }
+
+    .accordion-element-container{
+      ul.accordion-list > li.accordion-item {
+        border-bottom: 2px solid $accordion-element__button__border-color;
+        button.accordion-button { 
+          border: 0 none;
+          align-items: flex-start;
+          color: var(--base__color-1);
+          .accordion-button-text{
+            text-align: left;
+          }
+          .accordion-button-icon{
+            min-width: 20px;
+            margin-top: 3px;
+          }
+        }
+        &:last-child { border-bottom: 0 none; }
+      }
+    }
+
+  }
+
+  @include media('tablet-down') {
+
+    .accordion-element-container{
+      ul.accordion-list > li.accordion-item {
+        padding-bottom: 20px;
+        margin: 0;
+        button.accordion-button {
+          padding-top: 20px;
+          .accordion-button-text{
+            @include font(18, 22);
+          }
+        }
+      }
+    }
+
+  }
+
+  @include media('tablet') {
+
+    .accordion-element-container{
+      ul.accordion-list > li.accordion-item {
+        padding-bottom: 30px;
+        button.accordion-button { 
+          align-items: center;
+          .accordion-button-text{
+            @include font(24, 40);
+          }
+          .accordion-button-icon{
+            margin-top: 0;
+          }
+        }
+        &:first-child{
+          button.accordion-button { padding-top: 0; }
+        }
+
+        .accordion-content{
+          .copy-text{
+            ul{
+              grid-template-columns: repeat(1, 1fr);
+              gap: 15px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  @include media('tablet-wide') {
+
+    .accordion-element-container{
+      .headline-column{
+        padding-right: 20%;
+      }
+    }
+
+  }
+
+}

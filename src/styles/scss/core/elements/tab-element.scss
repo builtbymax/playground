@@ -1,0 +1,248 @@
+//
+//  Element: "Tab"
+//  ---------------------------------------------
+
+@if (map-get(map-get($appConfiguration, elements), 'tab-element') == true) {
+
+  //  Variables
+  //  ---------------------------------------------
+
+  $tab-element__container__class: 'tab-element-container' !default;
+  $tab-element__list__class: 'tab-head-list' !default;
+  $tab-element__item__class: 'tab-head-item' !default;
+  $tab-element__content-container__class: 'tab-content-container' !default;
+  $tab-element__content-block__class: 'tab-content-block' !default;
+
+  $tab-element__container__width: 100% !default;
+  $tab-element__container__position: relative !default;
+
+  $tab-element__tab-head__list__margin: 0 0 20px !default;
+  $tab-element__tab-head__list__padding: 3px 0 2px !default;
+  $tab-element__tab-head__list__display: flex !default;
+  $tab-element__tab-head__list__flex-direction: row !default;
+  $tab-element__tab-head__list__align-items: center !default;
+  $tab-element__tab-head__list__width: 100% !default;
+  $tab-element__tab-head__list__max-width: 100vw !default;
+  $tab-element__tab-head__list__overflow-x: auto !default;
+  $tab-element__tab-head__list__ms-scroll-snap-type: x mandatory !default;
+  $tab-element__tab-head__list__webkit-overflow-scrolling: touch !default;
+  $tab-element__tab-head__list__scroll-snap-type: x mandatory !default;
+  $tab-element__tab-head__list__scroll-behavior: smooth !default;
+  $tab-element__tab-head__list__border-bottom: 2px solid rgba(var(--base__color-1__rgb), 10%) !default;
+  
+  $tab-element__tab-head__item__z-index: 1 !default;
+  $tab-element__tab-head__item__scroll-snap-align: start !default;
+  $tab-element__tab-head__item__flex-shrink: 0 !default;
+  $tab-element__tab-head__item__margin-right: 30px !default;
+  $tab-element__tab-head__item__position: relative !default;
+  $tab-element__tab-head__item__background: transparent !default;
+  $tab-element__tab-head__item__padding: 12px 0 !default;
+  $tab-element__tab-head__item__border: 0 none !default;
+  $tab-element__tab-head__item__cursor: pointer !default;
+  $tab-element__tab-head__item__font-size: 16 !default;
+  $tab-element__tab-head__item__line-height: 20 !default;
+  $tab-element__tab-head__item__font-weight: $font-weight__base !default;
+  $tab-element__tab-head__item__font-family: $font-family__base !default;
+  $tab-element__tab-head__item__text-color: rgba(var(--base__color-1__rgb), 70%) !default;
+  $tab-element__tab-head__item__transition: color 0.3s ease !default;
+  $tab-element__tab-head__item__color__open: var(--base__color-1) !default;
+  $tab-element__tab-head__item__color__tablet-wide__hover: var(--base__color-1) !default;
+
+  $tab-element__tab-head__item__after__content: '' !default;
+  $tab-element__tab-head__item__after__display: block !default;
+  $tab-element__tab-head__item__after__position: absolute !default;
+  $tab-element__tab-head__item__after__left: 0 !default;
+  $tab-element__tab-head__item__after__bottom: -2px !default;
+  $tab-element__tab-head__item__after__z-index: 1 !default;
+  $tab-element__tab-head__item__after__width: 100% !default;
+  $tab-element__tab-head__item__after__height: 3px !default;
+  $tab-element__tab-head__item__after__background: var(--base__color-1) !default;
+  $tab-element__tab-head__item__after__transform: scaleX(0) !default;
+  $tab-element__tab-head__item__after__transform-origin: left !default;
+  $tab-element__tab-head__item__after__transition: transform 0.3s ease !default;
+  $tab-element__tab-head__item__after__transform__open: scaleX(1) !default;
+
+  $tab-element__tab-head__list__webkit-scrollbar: none !default;
+  $tab-element__tab-head__list__scrollbar-width: none !default;
+
+  $tab-element__arrow-configuration: true !default;
+
+  $tab-element__tab-head__arrow__display: flex !default;
+  $tab-element__tab-head__arrow__position: absolute !default;
+  $tab-element__tab-head__arrow__z-index: 1 !default;
+  $tab-element__tab-head__arrow__top: 18px !default;
+  $tab-element__tab-head__arrow__width: 8px !default;
+  $tab-element__tab-head__arrow__height: 13px !default;
+  $tab-element__tab-head__arrow__cursor: pointer !default;
+  $tab-element__tab-head__arrow__color: var(--text__base__color) !default;
+  $tab-element__tab-head__arrow__hidden__display: none !default;
+  $tab-element__tab-head__arrow__svg__position: relative !default;
+  $tab-element__tab-head__arrow__svg__z-index: 1 !default;
+  
+  $tab-element__tab-head__arrow__after__content: '' !default;
+  $tab-element__tab-head__arrow__after__display: block !default;
+  $tab-element__tab-head__arrow__after__position: absolute !default;
+  $tab-element__tab-head__arrow__after__size: 40px !default;
+  $tab-element__tab-head__arrow__after__top: 50% !default;
+  $tab-element__tab-head__arrow__after__transform: translateY(-50%) !default;
+  $tab-element__tab-head__arrow__after__background__gradient__color-0: var(--base__color-2__rgb) !default;
+  $tab-element__tab-head__arrow__after__background__gradient__color-1: var(--base__color-2__rgb) !default;
+  
+  $tab-element__tab-head__arrow__prev__left: 0 !default;
+  $tab-element__tab-head__arrow__prev__transform: rotate(180deg) !default;
+  $tab-element__tab-head__arrow__prev__after__right: 0 !default;
+  
+  $tab-element__tab-head__arrow__next__right: 0 !default;
+  $tab-element__tab-head__arrow__next__after__right: 0 !default;
+
+  $tab-element__tab-content__container__padding: 25px 0 0 !default;
+
+  $tab-element__tab-content__block__padding: 0 0 25px !default;
+  $tab-element__tab-content__block__padding__last-child: 0 !default;
+
+
+  //  Styles
+  //  ---------------------------------------------
+
+  @include media('mobile') {
+
+    .#{$tab-element__container__class}{
+      width: $tab-element__container__width;
+      position: $tab-element__container__position;
+
+      .#{$tab-element__list__class}{
+        margin: $tab-element__tab-head__list__margin;
+        padding: $tab-element__tab-head__list__padding;
+        display: $tab-element__tab-head__list__display;
+        flex-direction: $tab-element__tab-head__list__flex-direction;
+        align-items: $tab-element__tab-head__list__align-items;
+        width: $tab-element__tab-head__list__width;
+        max-width: $tab-element__tab-head__list__max-width;
+        // scrollsnap configuration 
+        // (arrows are additional in tab-element.js)
+        overflow-x: $tab-element__tab-head__list__overflow-x;
+        -ms-scroll-snap-type: $tab-element__tab-head__list__ms-scroll-snap-type;
+        -webkit-overflow-scrolling: $tab-element__tab-head__list__webkit-overflow-scrolling;
+        scroll-snap-type: $tab-element__tab-head__list__scroll-snap-type;
+        scroll-behavior: $tab-element__tab-head__list__scroll-behavior;    
+        border-bottom: $tab-element__tab-head__list__border-bottom;
+        .#{$tab-element__item__class}{
+          z-index: $tab-element__tab-head__item__z-index;
+          scroll-snap-align: $tab-element__tab-head__item__scroll-snap-align;
+          flex-shrink: $tab-element__tab-head__item__flex-shrink;
+          margin-right: $tab-element__tab-head__item__margin-right;
+          position: $tab-element__tab-head__item__position;
+          background: $tab-element__tab-head__item__background;
+          padding: $tab-element__tab-head__item__padding;
+          border: $tab-element__tab-head__item__border;
+          cursor: $tab-element__tab-head__item__cursor;
+          transition: $tab-element__tab-head__item__transition;
+          @include typo(
+            $fontSizeValue: $tab-element__tab-head__item__font-size,
+            $lineHeightValue: $tab-element__tab-head__item__line-height,
+            $fontWeightValue: $tab-element__tab-head__item__font-weight,
+            $fontFamilyValue: $tab-element__tab-head__item__font-family,
+            $textColor: $tab-element__tab-head__item__text-color,
+          );
+          &::after{
+            content: $tab-element__tab-head__item__after__content;
+            display: $tab-element__tab-head__item__after__display;
+            position: $tab-element__tab-head__item__after__position;
+            left: $tab-element__tab-head__item__after__left;
+            bottom: $tab-element__tab-head__item__after__bottom;
+            z-index: $tab-element__tab-head__item__after__z-index;
+            width: $tab-element__tab-head__item__after__width;
+            height: $tab-element__tab-head__item__after__height;
+            background: $tab-element__tab-head__item__after__background;
+            transform: $tab-element__tab-head__item__after__transform;
+            transform-origin: $tab-element__tab-head__item__after__transform-origin;
+            transition: $tab-element__tab-head__item__after__transition;
+          }
+          &.open{
+            color: $tab-element__tab-head__item__color__open;
+            &::after{ 
+              transform: $tab-element__tab-head__item__after__transform__open;
+            }
+          }
+        }
+
+        // removes scrollbar in firefox and chrome
+        &::-webkit-scrollbar{ display: $tab-element__tab-head__list__webkit-scrollbar; }
+        scrollbar-width: $tab-element__tab-head__list__scrollbar-width;
+
+        [class^="arrow-"]{
+          display: $tab-element__tab-head__arrow__display;
+          position: $tab-element__tab-head__arrow__position;
+          z-index: $tab-element__tab-head__arrow__z-index;
+          top: $tab-element__tab-head__arrow__top;
+          height: $tab-element__tab-head__arrow__height;
+          width: $tab-element__tab-head__arrow__width;
+          cursor: $tab-element__tab-head__arrow__cursor;
+          --tab__navigation__arrow__color: $tab-element__tab-head__arrow__color;
+          &[hidden]{ display: $tab-element__tab-head__arrow__hidden__display; }
+          svg{ 
+            position: $tab-element__tab-head__arrow__svg__position; 
+            z-index: $tab-element__tab-head__arrow__svg__z-index; 
+          }
+          @if ($tab-element__arrow-configuration == true) {
+            &::after{
+              content: $tab-element__tab-head__arrow__after__content;
+              display: $tab-element__tab-head__arrow__after__display;
+              $size: $tab-element__tab-head__arrow__after__size;
+              width: $size;
+              height: $size;
+              position: $tab-element__tab-head__arrow__after__position;
+              top: $tab-element__tab-head__arrow__after__top;
+              transform: $tab-element__tab-head__arrow__after__transform;
+              background: linear-gradient(
+                90deg, 
+                rgba($tab-element__tab-head__arrow__after__background__gradient__color-0, 0) 0, 
+                rgba($tab-element__tab-head__arrow__after__background__gradient__color-1, 1) 35%
+              );
+            }
+          }
+        }
+        .arrow-prev{
+          left: $tab-element__tab-head__arrow__prev__left;
+          transform: $tab-element__tab-head__arrow__prev__transform;
+          &::after{ right: $tab-element__tab-head__arrow__prev__after__right; }
+        }
+        .arrow-next{
+          right: $tab-element__tab-head__arrow__next__right;
+          &::after{ right: $tab-element__tab-head__arrow__next__after__right; }
+        }
+      }
+
+      .#{$tab-element__content-container__class}{
+        padding: $tab-element__tab-content__container__padding;
+        .#{$tab-element__content-block__class}{
+          padding: $tab-element__tab-content__block__padding;
+          &:last-child{ padding-bottom: $tab-element__tab-content__block__padding__last-child; }
+        }
+      }
+    }
+
+  }
+
+  // max-767
+  @include media('tablet-down') {}
+
+  // min-768
+  @include media('tablet') {}
+
+  // min-1024
+  @include media('tablet-wide') {
+
+    .#{$tab-element__container__class}{
+      .#{$tab-element__list__class}{
+        .#{$tab-element__item__class}{
+          &:hover:not(.open){
+            color: $tab-element__tab-head__item__color__tablet-wide__hover;
+          }
+        }
+      }
+    }
+
+  }
+
+}

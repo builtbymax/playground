@@ -1,0 +1,37 @@
+//
+//  Table
+//  ---------------------------------------------
+
+
+//  Variables
+//  ---------------------------------------------
+
+$component__table__default__figure__class: 'table' !default;
+$component__table__default__wrapper__class: 'contenttable' !default;
+
+$component__table__default__figure__table__width: 100% !default;
+$component__table__default__figure__table__overflow: auto !default;
+
+$component__table__default__table__border-collapse: collapse !default;
+$component__table__default__table__border-spacing: 0 !default;
+$component__table__default__table__width: 100% !default;
+$component__table__default__table__overflow: auto !default;
+$component__table__default__table__margin: 12px 0 32px 0 !default;
+
+$component__table__default__table__head__tr__th__border: 1px solid var(--base__color-1) !default;
+$component__table__default__table__body__tr__td__border: 1px solid var(--base__color-1) !default;
+
+$component__table__default__table__th__border: 1px solid var(--base__color-1) !default;
+$component__table__default__table__th__background-color: rgba(var(--project__color-1__rgb), .1) !default;
+$component__table__default__table__th__padding: 5px 8px !default;
+$component__table__default__table__th__text-align: left !default;
+$component__table__default__table__th__heading__margin: 0 !default;
+
+$component__table__default__table__body__tr__td__padding: 5px 8px !default;
+$component__table__default__table__body__tr__td__heading__margin: 0 !default;
+$component__table__default__table__body__tr__td__link__text-decoration: underline !default;
+$component__table__default__text__color: $font-color__base !default;
+$component__table__default__font-size: $font-size__s !default;
+$component__table__default__line-height: $line-height__base !default;
+$component__table__default__font-weight: $font-weight__base !default;
+$component__table__default__font-family: $font-family__base !default;
