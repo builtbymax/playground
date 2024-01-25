@@ -1,8 +1,7 @@
-import Navigation from "@/components/navigation/Navigation";
-import Section from "@/layouts/Section";
 import Element from "@/layouts/Element";
-import Headline from "@/components/headline-container/HeadlineContainer";
 import InputTextCounter from "./(components)/InputTextCounter";
+import { Headline, HeadlineContainer, Subline } from "@/components/UI/Headline";
+import { ContentSize, Section } from "@/components/UI/Section";
 
 export default function Button() {
   const pageContent = {
@@ -13,15 +12,23 @@ export default function Button() {
 
   return (
     <main>
-      <Navigation />
-      <Section spacingBottom={false}>
-        <Headline headline={pageContent.title} subline={pageContent.description} tag={pageContent.tag} inlineComponent={false} />
+      <Section>
+        <ContentSize>
+          <HeadlineContainer inlineComponent={false}>
+            <Headline as={pageContent.tag}>{pageContent.title}</Headline>
+            <Subline>{pageContent.description}</Subline>
+          </HeadlineContainer>
+        </ContentSize>
       </Section>
       <Section>
-        <Headline headline="Input text counter" tag="h2" />
-        <Element>
-          <InputTextCounter />
-        </Element>
+        <ContentSize>
+          <HeadlineContainer>
+            <Headline as="h2">Input text counter</Headline>
+          </HeadlineContainer>
+          <Element>
+            <InputTextCounter />
+          </Element>
+        </ContentSize>
       </Section>
     </main>
   )

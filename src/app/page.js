@@ -3,7 +3,8 @@ import { HeadlineContainer, Headline, Subline, Roofline } from "@/components/UI/
 import { GridColumn, GridRow } from '@/components/UI/Grid';
 import { Hero } from "@/components/Content/Hero/Hero";
 
-import Teaser from "@/components/teaser/Teaser";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/Content/Card/Card";
+import { Button } from "@/components/UI/Button";
 
 export default function Home() {
   return (
@@ -16,16 +17,23 @@ export default function Home() {
             <Headline as={content.section.tag}>{content.section.title}</Headline>
             <Subline>{content.section.description}</Subline>
           </HeadlineContainer>
-          <Headline as="h2">Coming back soon..</Headline>
-          {/* <div className="teaser-element-container">
+          <div className="teaser-element-container">
             <GridRow>
-              {teasers.map((teaser, index) => (
+              {teasers.map((content, index) => (
                 <GridColumn key={index} columnSize={{ m: 6, l: 4, }}>
-                  <Teaser slug={teaser.slug} title={teaser.title} description={teaser.description} layout={teaser.layout} />
+                  <Card className={`card-color-${index}`} {...(content.slug && { href: content.slug })}>
+                    <CardHeader>
+                      {content.items > 0 && <p><span>0{content.items}</span> {content.items > 1 ? 'Items' : 'Item'}</p>}
+                      <p>{content.description}</p>
+                    </CardHeader>
+                    <CardFooter>
+                      <CardTitle as="h3">{content.title}</CardTitle>
+                    </CardFooter>
+                  </Card>
                 </GridColumn>
               ))}
             </GridRow>
-          </div> */}
+          </div>
         </ContentSize>
       </Section>
     </main>
@@ -39,36 +47,47 @@ export default function Home() {
 
 const content = {
   section: {
-    roofline: "Most recent",
+    roofline: "Collection",
     title: "Elements",
-    description: "A collection of items.",
+    description: "All components and elements in one place, subdivided into categories.",
     tag: 'h2',
   },
 };
 
 const teasers = [
   {
-    slug: "/elements/button",
-    title: "Button",
-    description: "A button.",
-    layout: '0',
-  },
-  {
     slug: "/elements/teaser",
     title: "Teaser Elements",
     description: "A collection of teaser element layouts.",
-    layout: '0',
+    items: 5,
   },
   {
     slug: "/elements/forms",
     title: "Form Elements",
     description: "A collection of Form elements.",
-    layout: '0',
+    items: 1,
   },
   {
     slug: "/elements/sections",
     title: "Sections Elements",
     description: "A collection of Sections elements.",
-    layout: '0',
+    items: 1,
   },
+  {
+    // slug: "/elements/button",
+    title: "Buttons",
+    description: "Coming soon..",
+    items: 0,
+  },
+  {
+    // slug: "/elements/content",
+    title: "Content Elements",
+    description: "Coming soon..",
+    items: 0,
+  },
+  {
+    title: "UI Elements",
+    description: "Coming soon..",
+    items: 0,
+  }
 ];

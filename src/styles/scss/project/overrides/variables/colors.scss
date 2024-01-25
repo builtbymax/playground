@@ -24,9 +24,8 @@ $base-xml: false; // getMapWithXML($base);
 //  ---------------------------------------------
 
 $project: (
-  1: #0062FF,
-  2: #CD0F48,
-  // 3: skyblue,
+  1: #638889,
+  2: #C06C84,
 );
 
 // Create RGB & XML map if needed
@@ -41,11 +40,44 @@ $information: (
   2: #FFA500, // warning
   3: #2ECC40, // success
   4: #0074D9, // info
-) !default;
+);
 
 // Create RGB & XML map if needed
 $information-rgb: getMapWithRGB($information);
 $information-xml: false; // getMapWithXML($information);
+
+//  Pastell colors
+//  ---------------------------------------------
+
+$pastell: (
+  1: #F9EFDB,
+  2: #638889,
+  3: #F1F0E8,
+  4: #96B6C5,
+  5: #F9F5F6,
+  6: #C06C84,
+  7: #E1F0DA,
+  8: #99BC85,
+  9: #F5EEE6,
+  10: #C7B198,
+  11: #FDF4F5,
+  12: #804674,
+  13: #F6E5F5,
+  14: #756AB6,
+  15: #F1F6F9,
+  16: #394867,
+);
+
+// Create RGB & XML map if needed
+$pastell-rgb: getMapWithRGB($pastell);
+$pastell-xml: false; // getMapWithXML($information);
+
+@function pastell($key) { @return map-get($pastell, $key); } 
+
+// -> globals.scss
+// :root{
+//   @include createCSSVariableSet(pastell, $pastell, $pastell-rgb, false);
+// }
 
 //  Darkmode colors
 //  ---------------------------------------------
@@ -53,7 +85,7 @@ $information-xml: false; // getMapWithXML($information);
 $base-dark: (
   1: #FFF,
   2: #000,
-  3: #0B0B0B,
+  3: #F4F4F4,
   4: #898989,
   5: #252525,
   6: #272727,
@@ -63,9 +95,10 @@ $base-dark: (
 
 $base-dark-rgb: getMapWithRGB($base-dark);
 
-:root.dark-theme{
-  @include createCSSVariableSet(base, $base-dark, $base-dark-rgb, false);
-}
+// -> globals.scss
+// :root.dark-theme{
+//   @include createCSSVariableSet(base, $base-dark, $base-dark-rgb, false);
+// }
 
 
 // ------------------------------------------------------------------------------------------------------------------------------

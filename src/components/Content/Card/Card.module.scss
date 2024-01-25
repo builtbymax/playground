@@ -1,0 +1,88 @@
+//
+//  Element: "Card"
+//  ---------------------------------------------
+
+//  Import global helpers
+//  --------------------------------------------------
+
+@import '@s/scss/project/required.scss';
+
+//  Styles
+//  ---------------------------------------------
+
+@include media('mobile') {
+
+  .card-element{
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    aspect-ratio: 1/1;
+
+    @for $i from 0 through length($pastell)/2-1{
+      &.card-color-#{$i} {
+        background-color: var(--pastell__color-#{2*$i+1});
+        h3 { color: var(--pastell__color-#{2*$i+2}); }
+        --card__text__color: var(--pastell__color-#{2*$i+2});
+      }
+    }
+
+    .card-header{
+      p{
+        @include font(16, 20);
+        color: var(--card__text__color);
+        font-weight: $font-weight__semi-bold;
+        > span{
+          display: inline-block;
+          margin-right: 5px;
+          @include font(32, 40);
+          font-weight: $font-weight__extra-bold;
+          font-family: $font-family__variant-1;
+        }
+      }
+      p + p{
+        margin-top: 10px;
+        @include font(16, 20);
+        color: var(--card__text__color);
+        font-weight: $font-weight__regular;
+      }
+    }
+
+    .card-footer{
+      margin-top: auto;
+    }
+
+    &.card-link{
+      text-decoration: none;
+    }
+  }
+
+}
+
+// max-767
+@include media('tablet-down') {
+
+  .card-element{
+    padding: 25px;
+
+    h2,h3,h4,h5,h6{
+      @include font(26, 32);
+    }
+  }
+
+}
+
+// min-768
+@include media('tablet') {
+
+  .card-element{
+    padding: 40px;
+
+    h2,h3,h4,h5,h6{
+      @include font(32, 40);
+    }
+  }
+
+}

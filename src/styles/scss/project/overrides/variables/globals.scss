@@ -2,6 +2,8 @@
 //  ---------------------------------------------
 
 :root{
+  @include createCSSVariableSet(pastell, $pastell, $pastell-rgb, false);
+
   --font-color__base: #{base(3)};
   --font-color__base__rgb: #{base-rgb(3)};
   --font-color__variant-1: #{base(1)};
@@ -9,9 +11,16 @@
   --font-color__variant-2: #{base(3)};
   --font-color__variant-2__rgb: #{base-rgb(3)};
 
-  --font-family__base: $font-family__base;
-  --font-family__variant-1: $font-family__variant-1;
-  --font-family__variant-2: $font-family__variant-2;
+  --font-family__base: #{$font-family__base};
+  --font-family__variant-1: #{$font-family__variant-1};
+  --font-family__variant-2: #{$font-family__variant-2};
+}
+
+:root.dark-theme{
+  @include createCSSVariableSet(base, $base-dark, $base-dark-rgb, false);
+
+  --font-color__base: var(--base__color-1);
+  --font-color__variant-1: var(--base__color-3);
 }
 
 

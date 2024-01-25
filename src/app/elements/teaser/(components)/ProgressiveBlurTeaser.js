@@ -15,7 +15,7 @@ export default function Teaser() {
             <span></span>
             <span></span>
           </div>
-          <h3>HQ is in New York, USA</h3>
+          <h3>New York, USA</h3>
           <p>You can also work from anywhere in the world.</p>
         </div>
       </div>
