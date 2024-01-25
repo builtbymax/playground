@@ -6,7 +6,6 @@ $cta__general__default__icon-properties: map-deep-merge(
   (
     width: 20px,
     height: 20px,
-    margin: 15px,
     position: 'right',
     alignment: 'center',
     transition: all 0.3s ease-in-out,
@@ -28,6 +27,7 @@ $cta__default__properties: map-deep-merge(
       flex-direction: $cta__general__flex-direction,
       justify-content: $cta__general__justify-content,
       align-items: $cta__general__align-items,
+      gap: $cta__general__gap,
       font-size: $cta__general__font-size,
       line-height: $cta__general__line-height,
       font-weight: $cta__general__font-weight,

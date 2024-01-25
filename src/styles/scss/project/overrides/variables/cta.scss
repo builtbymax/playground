@@ -14,27 +14,28 @@
 // $cta__general__padding: 14px 22px;
 // $cta__general__text-transform: none;
 // $cta__general__text-decoration: none;
-// $cta__general__transition: all .25s ease-in-out;
+$cta__general__transition: all .25s ease-in-out;
 // $cta__general__width: auto;
 // $cta__general__height: auto;
 // $cta__general__display: flex;
 // $cta__general__flex-direction: row;
 // $cta__general__justify-content: center;
 // $cta__general__align-items: center;
+// $cta__general__gap: 15px;
 
 // $cta__general__font-size: $font-size__s;
 // $cta__general__line-height: $line-height__s;
 // $cta__general__font-weight: $font-weight__semi-bold;
 // $cta__general__font-family: $font-family__base;
 
-// $cta__layout-0__background: base(1);
-// $cta__layout-0__text: base(2);
-// $cta__layout-0__icon: base(2);
-// $cta__layout-0__border: 0 none;
-// $cta__layout-0__background__hover: project(1);
-// $cta__layout-0__text__hover: base(2);
-// $cta__layout-0__icon__hover: base(2);
-// $cta__layout-0__border__hover: 0 none;
+$cta__layout-0__background: pastell(2);
+$cta__layout-0__text: pastell(1);
+$cta__layout-0__icon: pastell(1);
+$cta__layout-0__border: 0 none;
+$cta__layout-0__background__hover: pastell(1);
+$cta__layout-0__text__hover: pastell(2);
+$cta__layout-0__icon__hover: pastell(2);
+$cta__layout-0__border__hover: 0 none;
 
 // $cta__layout-1__background: transparent;
 // $cta__layout-1__text: base(1);
@@ -55,6 +56,34 @@
 // $cta__layout-2__border__hover: 0 none;
 
 
+//  Styles
+//  ---------------------------------------------
+
+.cta{
+  &.github-button{
+    .icon{
+      order: 0;
+      width: 20px;
+      height: 20px;
+      > svg{
+        transition: $cta__general__transition;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+$cta__default__properties: (
+  layouts: (
+    0: (
+      padding: 14px 24px,
+      border-radius: 35px,
+    ),
+  ),
+);
+
+
 //  Maps
 //  ---------------------------------------------
 
@@ -62,7 +91,6 @@
 // $cta__general__default__icon-properties: (
 //   width: 20px,
 //   height: 20px,
-//   margin: 15px,
 //   position: 'left',
 //   alignment: 'center',
 //   transition: all 0.3s ease-in-out,
@@ -81,6 +109,7 @@
 //     flex-direction: $cta__general__flex-direction,
 //     justify-content: $cta__general__justify-content,
 //     align-items: $cta__general__align-items,
+//     gap: $cta__general__gap,
 //     font-size: $cta__general__font-size,
 //     line-height: $cta__general__line-height,
 //     font-weight: $cta__general__font-weight,

@@ -54,7 +54,7 @@
         left: 50%;
         z-index: 2;
         transform: translate(-50%, -50%) rotate(45deg) scale(1.8);
-        background-color: var(--project__color-2);
+        background-color: var(--project__color-1);
         border: 2px solid var(--base__color-2);
 
         width: $w;
@@ -67,7 +67,7 @@
         z-index: 1;
         transform: translate(-50%, -50%) rotate(45deg) scale(2.4);
         border-radius: 50%;
-        background-color: var(--project__color-2);
+        background-color: var(--project__color-1);
         opacity: .2;
 
         width: $w;
@@ -78,7 +78,9 @@
     h3{
       position: relative;
       margin-bottom: 8px;
+      font-weight: 700;
       z-index: 4;
+      font-family: var(--font-family__base);
     }
     p{
       position: relative;

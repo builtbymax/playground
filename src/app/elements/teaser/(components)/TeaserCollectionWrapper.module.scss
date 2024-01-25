@@ -8,11 +8,11 @@
 $element__color-0: #151515;
 $element__color-1: #1E1E1E;
 $element__color-2: #FFF;
-$element__color-3: #2176FF;
+$element__color-3: var(--project__color-1);
 $element__color-4: #D8D8D8;
 
-$teaser__background-color: #F7F4F8;
-$teaser__border-color: rgba(var(--project__color-2__rgb), .1);
+$teaser__background-color: var(--pastell__color-15);
+$teaser__border-color: rgba(var(--pastell__color-16__rgb), .1);
 
 
 .teaser-element{
@@ -25,6 +25,7 @@ $teaser__border-color: rgba(var(--project__color-2__rgb), .1);
   min-height: 360px;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+
   .teaser-box-wrapper{
     display: flex;
     flex-direction: column;

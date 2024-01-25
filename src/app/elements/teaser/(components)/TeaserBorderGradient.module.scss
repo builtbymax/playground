@@ -3,17 +3,18 @@
 //  ------------------------------------------------------
 
 $border-radius: 8px;
-$text__color-0: var(--project__color-1);
-$text__color-1: var(--project__color-2);
-$teaser__background-color: #F5F8FF; // rgba(var(--project__color-2__rgb), .05);
+$text__color-0: var(--pastell__color-12);
+$text__color-1: var(--pastell__color-12);
+$teaser__background-color: var(--pastell__color-11);
 
-$border-color-0: rgba(var(--project__color-2__rgb), .8);
-$border-color-1: rgba(var(--project__color-2__rgb), .5);
+$border-color-0: rgba(var(--pastell__color-12__rgb), .8);
+$border-color-1: rgba(var(--pastell__color-12__rgb), .5);
 
 $teaser-element__headline__font: 'ClashDisplay-Variable', serif;
 
 .teaser-element {
   --teaser__icon__color: #{$text__color-1};
+
   width: 100%;
   flex: 1;
   padding: 35px 30px;
@@ -21,6 +22,7 @@ $teaser-element__headline__font: 'ClashDisplay-Variable', serif;
   border-radius: $border-radius;
   background-color: $teaser__background-color;
   transition: background 0.45s;
+
   .icon {
     width: 36px;
     height: 36px;
@@ -30,6 +32,7 @@ $teaser-element__headline__font: 'ClashDisplay-Variable', serif;
       height: 100%;
     }
   }
+
   h3 {
     margin-bottom: 22px;
     color: $text__color-0;

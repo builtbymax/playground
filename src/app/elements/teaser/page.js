@@ -1,12 +1,11 @@
-import Navigation from "@/components/navigation/Navigation";
-import Section from "@/layouts/Section";
 import Element from "@/layouts/Element";
-import Headline from "@/components/headline-container/HeadlineContainer";
 import TeaserBorderGradient from "./(components)/TeaserBorderGradient";
 import TeaserImageHover from "./(components)/TeaserImageHover";
 import TeaserCollectionWrapper from "./(components)/TeaserCollectionWrapper";
 import TeaserSpaceAnimation from "./(components)/TeaserSpaceAnimation";
 import ProgressiveBlurTeaser from "./(components)/ProgressiveBlurTeaser";
+import { ContentSize, Section } from "@/components/UI/Section";
+import { Headline, HeadlineContainer } from "@/components/UI/Headline";
 
 export default function Teaser() {
   const pageContent = {
@@ -16,39 +15,62 @@ export default function Teaser() {
   }
   return (
     <main>
-      <Navigation />
-      <Section spacingBottom={false}>
-        <Headline headline={pageContent.title} subline={pageContent.description} tag={pageContent.tag} inlineComponent={false} />
+      <Section>
+        <ContentSize>
+          <HeadlineContainer inlineComponent={false}>
+            <Headline as="h1">Teaser</Headline>
+          </HeadlineContainer>
+        </ContentSize>
       </Section>
       <Section>
-        <Headline headline="Gradient border teaser" tag="h2" />
-        <Element>
-          <TeaserBorderGradient />
-        </Element>
+        <ContentSize>
+          <HeadlineContainer>
+            <Headline as="h2">Gradient border teaser</Headline>
+          </HeadlineContainer>
+          <Element>
+            <TeaserBorderGradient />
+          </Element>
+        </ContentSize>
       </Section>
       <Section>
-        <Headline headline="Image Hover teaser" tag="h2" />
-        <Element>
-          <TeaserImageHover />
-        </Element>
+        <ContentSize>
+          <HeadlineContainer>
+            <Headline as="h2">Image hover teaser</Headline>
+          </HeadlineContainer>
+          <Element>
+            <TeaserImageHover />
+          </Element>
+        </ContentSize>
       </Section>
       <Section>
-        <Headline headline="Collection Teaser Elements" tag="h2" />
-        <Element>
-          <TeaserCollectionWrapper />
-        </Element>
+        <ContentSize>
+          <HeadlineContainer>
+            <Headline as="h2">Teaser collection wrapper</Headline>
+          </HeadlineContainer>
+          <Element>
+            <TeaserCollectionWrapper />
+          </Element>
+        </ContentSize>
       </Section>
       <Section>
-        <Headline headline="Space like animation teaser" tag="h2" />
-        <Element>
-          <TeaserSpaceAnimation />
-        </Element>
+        <ContentSize>
+          <HeadlineContainer>
+            <Headline as="h2">Space animation teaser</Headline>
+          </HeadlineContainer>
+          <Element>
+            <TeaserSpaceAnimation />
+          </Element>
+        </ContentSize>
       </Section>
       <Section>
-        <Headline headline="Progressive Blur Teaser" tag="h2" />
-        <Element>
-          <ProgressiveBlurTeaser />
-        </Element>
+        <ContentSize>
+          <HeadlineContainer>
+            <Headline as="h2">Progressive blur teaser</Headline>
+          </HeadlineContainer>
+          <Element>
+            <ProgressiveBlurTeaser />
+          </Element>
+        </ContentSize>
       </Section>
     </main>
   )
