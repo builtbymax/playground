@@ -1,13 +1,15 @@
-import Navigation from "@/components/navigation/Navigation";
-import Section from "@/layouts/Section";
-import Headline from "@/components/headline-container/HeadlineContainer";
+import { Headline, HeadlineContainer } from "@/components/UI/Headline";
+import { ContentSize, Section } from "@/components/UI/Section";
 
-export default function Elements() {
+export default function ElementsPage() {
   return (
     <main>
-      <Navigation />
       <Section>
-        <Headline headline="Elements" tag="h1" />
+        <ContentSize>
+          <HeadlineContainer inlineComponent={false}>
+            <Headline as="h1">Elements</Headline>
+          </HeadlineContainer>
+        </ContentSize>
       </Section>
     </main>
   )
